@@ -48,33 +48,33 @@ jobs:
 
       # =======================================================
       # Project 2: talk-2026-01
-      # =======================================================
-      - name: Install and Build talk-2026-01
-        working-directory: talk-2026-01
-        run: |
-          npm install
-          REPO_NAME=${{ github.event.repository.name }}
-          npx slidev build --out dist --base /${REPO_NAME}/talk-2026-01/
+      # # =======================================================
+      # - name: Install and Build talk-2026-01
+      #   working-directory: talk-2026-01
+      #   run: |
+      #     npm install
+      #     REPO_NAME=${{ github.event.repository.name }}
+      #     npx slidev build --out dist --base /${REPO_NAME}/talk-2026-01/
 
-      - name: Move talk-2026-01 to Public
-        run: |
-          mkdir -p public/talk-2026-01
-          cp -r talk-2026-01/dist/* public/talk-2026-01/
+      # - name: Move talk-2026-01 to Public
+      #   run: |
+      #     mkdir -p public/talk-2026-01
+      #     cp -r talk-2026-01/dist/* public/talk-2026-01/
 
       # =======================================================
       # Project 3: talk-2026-02
       # =======================================================
-      - name: Install and Build talk-2026-02
-        working-directory: talk-2026-02
-        run: |
-          npm install
-          REPO_NAME=${{ github.event.repository.name }}
-          npx slidev build --out dist --base /${REPO_NAME}/talk-2026-02/
+      # - name: Install and Build talk-2026-02
+      #   working-directory: talk-2026-02
+      #   run: |
+      #     npm install
+      #     REPO_NAME=${{ github.event.repository.name }}
+      #     npx slidev build --out dist --base /${REPO_NAME}/talk-2026-02/
 
-      - name: Move talk-2026-02 to Public
-        run: |
-          mkdir -p public/talk-2026-02
-          cp -r talk-2026-02/dist/* public/talk-2026-02/
+      # - name: Move talk-2026-02 to Public
+      #   run: |
+      #     mkdir -p public/talk-2026-02
+      #     cp -r talk-2026-02/dist/* public/talk-2026-02/
 
       # =======================================================
       # Generate Landing Page
