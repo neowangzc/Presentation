@@ -47,22 +47,41 @@ jobs:
           cp -r demo-training/dist/* public/demo-training/
 
       # =======================================================
-      # Project 2: talk-2026-01
-      # # =======================================================
-      # - name: Install and Build talk-2026-01
-      #   working-directory: talk-2026-01
-      #   run: |
-      #     npm install
-      #     REPO_NAME=${{ github.event.repository.name }}
-      #     npx slidev build --out dist --base /${REPO_NAME}/talk-2026-01/
+      # Project 2: 20260409
+      # =======================================================
+      - name: Install and Build 20260409
+        if: ${{ hashFiles('20260409/package.json') != '' }}
+        working-directory: 20260409
+        run: |
+          npm install
+          REPO_NAME=${{ github.event.repository.name }}
+          npx slidev build --out dist --base /${REPO_NAME}/20260409/
 
-      # - name: Move talk-2026-01 to Public
-      #   run: |
-      #     mkdir -p public/talk-2026-01
-      #     cp -r talk-2026-01/dist/* public/talk-2026-01/
+      - name: Move 20260409 to Public
+        if: ${{ hashFiles('20260409/package.json') != '' }}
+        run: |
+          mkdir -p public/20260409
+          cp -r 20260409/dist/* public/20260409/
 
       # =======================================================
-      # Project 3: talk-2026-02
+      # Project 3: about-me
+      # =======================================================
+      - name: Install and Build about-me
+        if: ${{ hashFiles('about-me/package.json') != '' }}
+        working-directory: about-me
+        run: |
+          npm install
+          REPO_NAME=${{ github.event.repository.name }}
+          npx slidev build --out dist --base /${REPO_NAME}/about-me/
+
+      - name: Move about-me to Public
+        if: ${{ hashFiles('about-me/package.json') != '' }}
+        run: |
+          mkdir -p public/about-me
+          cp -r about-me/dist/* public/about-me/
+
+      # =======================================================
+      # Project 4: talk-2026-02 (template — uncomment to use)
       # =======================================================
       # - name: Install and Build talk-2026-02
       #   working-directory: talk-2026-02

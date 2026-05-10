@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+*.local
+.vite-inspect
+.remote-assets
+components.d.ts
+
+# Local presentation exports and notes
+*.pdf
+speaker-script.md
+output/
+.qa/
