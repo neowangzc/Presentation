@@ -172,9 +172,9 @@ mermaid:
               <div class="mock-textarea">I can build the website in 1 day.</div>
             </div>
             <div class="mock-proposals">
-              <div class="mock-proposal"><i></i><span>Worker A</span><b>$620</b></div>
-              <div class="mock-proposal marked"><i></i><span>Worker B</span><b>$640</b></div>
-              <div class="mock-proposal"><i></i><span>Worker C</span><b>$700</b></div>
+              <div class="mock-proposal"><twemoji-man-technologist class="proposal-avatar"/><span>Worker A</span><b>$620</b></div>
+              <div class="mock-proposal marked"><twemoji-woman-technologist class="proposal-avatar"/><span>Worker B</span><b>$640</b></div>
+              <div class="mock-proposal"><twemoji-man-technologist class="proposal-avatar"/><span>Worker C</span><b>$700</b></div>
             </div>
           </div>
         </div>

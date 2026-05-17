@@ -1828,11 +1828,19 @@ h1, h2, h3, p {
   border-color: var(--teal);
 }
 
-.mock-proposal i {
+.mock-proposal i,
+.proposal-avatar {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: #cbd5e1;
+}
+
+.proposal-avatar {
+  background: transparent;
+  display: inline-block;
+  font-size: 34px;
+  line-height: 1;
 }
 
 .mock-proposal.marked i {
