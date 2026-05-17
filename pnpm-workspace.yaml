@@ -2,6 +2,6 @@ packages:
   - 'about-me'
   - '20260409'
   - 'demo-training'
-  - 'slidecodex'
+  - 'zemi260518'
 allowBuilds:
   playwright-chromium: true

@@ -1,6 +1,6 @@
 # Presentation Monorepo
 
-Slidev 多 talk monorepo。每个顶层子目录是一个独立的 Slidev 演示（`about-me/`, `20260409/`, `demo-training/`, `slidecodex/` …）。通过 **pnpm workspace** 共享依赖，避免每个 talk 单独装一份 ~500MB 的 `node_modules`。
+Slidev 多 talk monorepo。每个顶层子目录是一个独立的 Slidev 演示（`about-me/`, `20260409/`, `demo-training/`, `zemi260518/` …）。通过 **pnpm workspace** 共享依赖，避免每个 talk 单独装一份 ~500MB 的 `node_modules`。
 
 ## 工具链
 
@@ -21,7 +21,7 @@ Slidev 多 talk monorepo。每个顶层子目录是一个独立的 Slidev 演示
 │   └── ...
 ├── 20260409/                # talk 2
 ├── demo-training/           # talk 3
-└── slidecodex/              # talk 4
+└── zemi260518/              # talk 4
 ```
 
 根目录的 `node_modules/` 是 pnpm 的 `.pnpm/` 内容寻址存储（硬链接到 `~/Library/pnpm`）。每个 talk 的 `node_modules/` 是几十 KB 的符号链接，**不要手动改**。
@@ -65,7 +65,7 @@ pnpm --filter about-me add -D some-dev-package
    ```
 2. 在根 `pnpm-workspace.yaml` 的 `packages:` 列表加一行 `- 'talk-2026-XX'`。
 3. 在根目录跑 `pnpm install`（不带任何参数就会扫到新 workspace 成员）。
-4. 在 `.github/workflows/deploy.yml` 抄一个现成 talk 的 "Build" + "Move to Public" 两个 step（搜 `slidecodex` 那段最干净），把名字换掉。
+4. 在 `.github/workflows/deploy.yml` 抄一个现成 talk 的 "Build" + "Move to Public" 两个 step（搜 `zemi260518` 那段最干净），把名字换掉。
 5. 部署后访问 `https://<user>.github.io/<repo>/talk-2026-XX/`。
 
 ## 部署（GitHub Pages）
@@ -84,7 +84,7 @@ npm flat hoisting 会把传递依赖（比如 `@slidev/types`）也露在顶层 
 **修复**：`pnpm --filter <talk> add -D @slidev/types`（或者其它缺的包）。这其实是修了一个 npm 时代被隐藏的 bug。
 
 ### 2. 子目录里不要 `git init`
-之前 `slidecodex/` 嵌套了一个独立 `.git`，导致父 repo 无法把它作为普通目录追踪 → push 上去 CI 拉不到这个目录 → `pnpm install --frozen-lockfile` 因 workspace 找不到这个包而报错。
+之前 `zemi260518/` 嵌套了一个独立 `.git`，导致父 repo 无法把它作为普通目录追踪 → push 上去 CI 拉不到这个目录 → `pnpm install --frozen-lockfile` 因 workspace 找不到这个包而报错。
 
 **做法**：所有 talk 都是父 monorepo 的普通子目录，不要在子目录跑 `git init`。
 

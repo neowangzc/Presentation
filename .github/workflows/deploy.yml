@@ -87,20 +87,20 @@ jobs:
           cp -r about-me/dist/* public/about-me/
 
       # =======================================================
-      # Project 4: slidecodex
+      # Project 4: zemi260518
       # =======================================================
-      - name: Build slidecodex
-        if: ${{ hashFiles('slidecodex/package.json') != '' }}
-        working-directory: slidecodex
+      - name: Build zemi260518
+        if: ${{ hashFiles('zemi260518/package.json') != '' }}
+        working-directory: zemi260518
         run: |
           REPO_NAME=${{ github.event.repository.name }}
-          pnpm exec slidev build --out dist --base /${REPO_NAME}/slidecodex/
+          pnpm exec slidev build --out dist --base /${REPO_NAME}/zemi260518/
 
-      - name: Move slidecodex to Public
-        if: ${{ hashFiles('slidecodex/package.json') != '' }}
+      - name: Move zemi260518 to Public
+        if: ${{ hashFiles('zemi260518/package.json') != '' }}
         run: |
-          mkdir -p public/slidecodex
-          cp -r slidecodex/dist/* public/slidecodex/
+          mkdir -p public/zemi260518
+          cp -r zemi260518/dist/* public/zemi260518/
 
       # =======================================================
       # Project 5: talk-2026-XX (template — uncomment to use)
