@@ -299,12 +299,12 @@ mermaid:
   <div class="setting-domain-grid">
     <div class="setting-domain-card" v-click="1">
       <div class="domain-role">Male-typed work</div>
-      <h3>IT &amp; Programming</h3>
+      <h3>IT &amp; Programming Starters</h3>
       <div class="female-share"><b style="color:#2563eb; font-size:60px;">11.7%</b><span>female</span></div>
     </div>
     <div class="setting-domain-card" v-click="2">
       <div class="domain-role">Female-typed work</div>
-      <h3>Writing &amp; Translation</h3>
+      <h3>Writing &amp; Translation Starters</h3>
       <div class="female-share"><b style="color:#dc2626; font-size:60px;">44.9%</b><span>female</span></div>
     </div>
   </div>
