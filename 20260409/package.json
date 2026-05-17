@@ -1,5 +1,5 @@
 {
-  "name": "about-me",
+  "name": "20260409",
   "type": "module",
   "private": true,
   "scripts": {
@@ -12,9 +12,5 @@
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.26"
-  },
-  "devDependencies": {
-    "@slidev/types": "^52.15.2",
-    "playwright-chromium": "^1.59.1"
   }
 }

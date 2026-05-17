@@ -1,0 +1,2500 @@
+:root {
+  --paper: #f9fafb;
+  --ink: #2a373a;
+  --muted: #5f6b73;
+  --faint: #d1d5db;
+  --teal: #4338ca;
+  --teal-soft: #eef2ff;
+  --clay: #f59e0b;
+  --clay-soft: #fef3c7;
+  --gold: #ffa500;
+  --dark: #2a373a;
+}
+
+.slidev-layout {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  padding: 0;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 46px 58px 38px;
+  overflow: hidden;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 18px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.kicker::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--teal);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.claim {
+  margin-top: 26px;
+  max-width: 920px;
+  font-family: "Songti SC", "STSong", "PingFang SC", serif;
+  font-size: 48px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.claim.wide {
+  max-width: 1120px;
+}
+
+.support {
+  max-width: 760px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.footer {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--faint);
+  padding-top: 10px;
+  color: #7a6f63;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.metric-rail {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  bottom: 82px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.metric {
+  border-left: 3px solid var(--teal);
+  padding-left: 16px;
+}
+
+.metric:nth-child(2) { border-color: var(--clay); }
+.metric:nth-child(3) { border-color: var(--gold); }
+.metric:nth-child(4) { border-color: var(--teal); }
+
+.metric .value {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 33px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.metric .label {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 40px;
+}
+
+.rail-title {
+  font-size: 20px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.big-number {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.process {
+  margin-top: 58px;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr 60px 1fr 60px 1fr;
+  align-items: center;
+}
+
+.process .step {
+  min-height: 148px;
+  border-top: 2px solid var(--ink);
+  padding-top: 18px;
+}
+
+.process .arrow {
+  color: var(--clay);
+  font-size: 34px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.step .num {
+  color: var(--teal);
+  font-family: "Avenir Next", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.step .name {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.step .desc {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.need-provide-table {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid var(--ink);
+  background: rgba(255,255,255,0.28);
+}
+
+.need-provide-head {
+  padding: 18px 24px;
+  background: var(--dark);
+  color: #ffffff;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.need-provide-head:nth-child(1),
+.need-provide-cell:nth-child(odd) {
+  border-right: 2px solid var(--ink);
+}
+
+.need-provide-cell {
+  min-height: 104px;
+  padding: 26px 30px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid var(--faint);
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.need-provide-cell:nth-child(4n + 3),
+.need-provide-cell:nth-child(4n + 4) {
+  background: rgba(238,242,255,0.58);
+}
+
+.dark-panel {
+  background: var(--dark);
+  color: white;
+  padding: 28px 32px;
+}
+
+.light-panel {
+  background: rgba(255,255,255,0.28);
+  border-top: 2px solid var(--faint);
+  padding: 24px 28px;
+}
+
+.two-channel {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.channel {
+  min-height: 250px;
+  padding: 30px 34px;
+  border-top: 4px solid var(--teal);
+  background: rgba(255,255,255,0.24);
+}
+
+.channel.failure {
+  border-color: var(--clay);
+}
+
+.channel h3 {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.channel p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.center-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.theory-two-resources {
+  margin-top: 58px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.resource-card {
+  min-height: 260px;
+  padding: 34px 36px;
+  background: rgba(255,255,255,0.3);
+  border-top: 5px solid var(--teal);
+  box-shadow: 0 14px 30px rgba(23,32,51,0.06);
+}
+
+.resource-card:nth-child(2) {
+  border-color: var(--clay);
+}
+
+.resource-num {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.resource-card:nth-child(2) .resource-num {
+  color: var(--clay);
+}
+
+.resource-card b {
+  display: block;
+  margin-top: 28px;
+  color: var(--ink);
+  font-size: 30px;
+  line-height: 1.18;
+}
+
+.resource-card p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 23px;
+  line-height: 1.38;
+  font-weight: 700;
+}
+
+.theory-three-bullets {
+  margin-top: 38px;
+  display: grid;
+  gap: 14px;
+}
+
+.theory-bullet {
+  min-height: 104px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: center;
+  gap: 26px;
+  padding: 16px 30px;
+  background: rgba(255,255,255,0.3);
+  border-left: 5px solid var(--teal);
+  box-shadow: 0 10px 24px rgba(23,32,51,0.05);
+}
+
+.bullet-num {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.theory-bullet b {
+  display: block;
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.theory-bullet p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 21px;
+  line-height: 1.32;
+  font-weight: 700;
+}
+
+.theory-bridge {
+  margin-top: 18px;
+  padding: 16px 30px;
+  background: var(--dark);
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+}
+
+.hypotheses {
+  margin-top: 48px;
+  display: grid;
+  gap: 18px;
+}
+
+.hypo {
+  min-height: 124px;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 32px;
+  background: rgba(255,255,255,0.32);
+  border-left: 5px solid var(--teal);
+  box-shadow: 0 10px 24px rgba(23,32,51,0.05);
+}
+
+.hypo .tag {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--teal);
+}
+
+.hypo:nth-child(2) .tag {
+  color: var(--teal);
+}
+
+.hypo:nth-child(3) .tag {
+  color: var(--teal);
+}
+
+.hypo .text {
+  font-size: 25px;
+  line-height: 1.28;
+  font-weight: 800;
+}
+
+.hypo .expect {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.hypo .expect:empty {
+  display: none;
+}
+
+.sample-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+}
+
+.sample {
+  border-top: 3px solid var(--ink);
+  padding-top: 20px;
+}
+
+.sample .domain {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.sample .meta {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.share-bar {
+  margin-top: 28px;
+  height: 30px;
+  background: #e9dfd0;
+  position: relative;
+}
+
+.share-bar .fill {
+  height: 100%;
+  background: var(--teal);
+  width: var(--w);
+}
+
+.sample:nth-child(2) .share-bar .fill {
+  background: var(--gold);
+}
+
+.share-bar .label {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.setting-metrics {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.data-overview-copy {
+  max-width: 980px;
+  margin-top: 20px;
+  color: #111827;
+  font-size: 24px;
+  line-height: 1.42;
+  font-weight: 400;
+}
+
+.data-overview-copy sup {
+  font-size: 0.58em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.data-overview-copy + .setting-metrics {
+  margin-top: 30px;
+}
+
+.setting-metric {
+  min-height: 128px;
+  padding: 26px 28px;
+  background: var(--dark);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.setting-metric b {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.setting-metric span {
+  margin-top: 10px;
+  color: #c7d2fe;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.setting-domain-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.setting-domain-card {
+  min-height: 168px;
+  padding: 26px 30px;
+  background: rgba(255,255,255,0.32);
+  border-top: 5px solid var(--teal);
+  box-shadow: 0 10px 24px rgba(23,32,51,0.05);
+}
+
+.domain-role {
+  color: var(--muted);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.setting-domain-card h3 {
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.female-share {
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.female-share b {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.female-share span {
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.tracking-note {
+  margin-top: 26px;
+  padding: 20px 26px;
+  background: var(--teal-soft);
+  border-left: 5px solid var(--teal);
+  color: var(--ink);
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.tracking-note:empty {
+  display: none;
+}
+
+.outcomes {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.outcome {
+  min-height: 210px;
+  border-top: 3px solid var(--teal);
+  padding-top: 18px;
+}
+
+.outcome:nth-child(3),
+.outcome:nth-child(4) {
+  border-color: var(--clay);
+}
+
+.outcome .label {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.outcome .meaning {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.bar-block {
+  margin-top: 40px;
+  display: grid;
+  gap: 22px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 240px 1fr 80px;
+  gap: 20px;
+  align-items: center;
+}
+
+.bar-row .who {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.bar-track {
+  height: 22px;
+  background: #e9dfd0;
+  position: relative;
+}
+
+.bar-track .fill {
+  height: 100%;
+  width: var(--w);
+  background: var(--teal);
+}
+
+.bar-track .fill.clay {
+  background: var(--clay);
+}
+
+.bar-row .value {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.coef-block {
+  margin-top: 36px;
+  display: grid;
+  gap: 24px;
+}
+
+.coef-row {
+  display: grid;
+  grid-template-columns: 255px 1fr 80px;
+  gap: 18px;
+  align-items: center;
+}
+
+.coef-label {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.axis {
+  position: relative;
+  height: 30px;
+  background: #e9dfd0;
+}
+
+.axis::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 1px;
+  height: 40px;
+  background: #9a8d7d;
+}
+
+.axis .pos,
+.axis .neg {
+  position: absolute;
+  top: 6px;
+  height: 18px;
+}
+
+.axis .pos {
+  left: 50%;
+  width: var(--w);
+  background: var(--teal);
+}
+
+.axis .neg {
+  right: 50%;
+  width: var(--w);
+  background: var(--clay);
+}
+
+.coef-value {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.success-results-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 185px 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 0;
+  align-items: stretch;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.success-results-grid > div {
+  border-bottom: 1px solid var(--faint);
+}
+
+.success-results-grid > div:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.success-head {
+  padding: 14px 18px 12px;
+  color: var(--ink);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.success-head b {
+  display: block;
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.success-head span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.success-dv {
+  padding: 20px 16px;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.success-effect {
+  min-height: 84px;
+  padding: 15px 18px 13px;
+}
+
+.effect-line {
+  display: flex;
+  align-items: center;
+}
+
+.effect-line .coef {
+  color: var(--ink);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.success-effect.positive .coef {
+  color: #2563eb;
+}
+
+.success-effect.negative .coef {
+  color: #dc2626;
+}
+
+.success-effect.nonsig .coef {
+  color: #8b949e;
+}
+
+.success-effect p {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.22;
+  font-weight: 700;
+}
+
+.matrix {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  border-top: 2px solid var(--ink);
+}
+
+.matrix > div {
+  min-height: 78px;
+  border-bottom: 1px solid var(--faint);
+  padding: 16px 18px;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.matrix .head {
+  min-height: auto;
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.matrix .rowhead {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.domain-results-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 190px 250px 1fr 1fr;
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.domain-results-grid > div {
+  min-height: 54px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--faint);
+  display: flex;
+  align-items: center;
+}
+
+.domain-results-grid > div:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.domain-head {
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center;
+  color: var(--ink);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.domain-head b {
+  display: block;
+  font-size: 21px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.domain-head span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.domain-group {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.domain-outcome {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.domain-coef {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.domain-coef.positive {
+  color: #2563eb;
+}
+
+.domain-coef.negative {
+  color: #dc2626;
+}
+
+.domain-coef.nonsig {
+  color: #8b949e;
+}
+
+.domain-takeaway {
+  margin-top: 20px;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1.18;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pathway {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr 80px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.node {
+  min-height: 150px;
+  padding: 24px;
+  border-top: 4px solid var(--teal);
+  background: rgba(255,255,255,0.26);
+}
+
+.node.failure {
+  border-color: var(--clay);
+}
+
+.node h3 {
+  font-size: 24px;
+}
+
+.node p {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.arrow-big {
+  text-align: center;
+  color: var(--clay);
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.research-questions {
+  margin-top: 56px;
+  display: grid;
+  gap: 24px;
+}
+
+.rq-card {
+  min-height: 142px;
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  align-items: stretch;
+  background: rgba(255,255,255,0.32);
+  border: 2px solid var(--faint);
+  box-shadow: 0 14px 30px rgba(23,32,51,0.06);
+}
+
+.rq-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--teal);
+  color: #ffffff;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.rq-card p {
+  margin: 0;
+  padding: 34px 42px;
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.ladder {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.ladder-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 26px;
+  align-items: start;
+  border-top: 1px solid var(--faint);
+  padding-top: 18px;
+}
+
+.ladder-row .n {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.ladder-row .t {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.ladder-row .d {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.closing {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  top: 172px;
+  bottom: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 64px;
+}
+
+.quote {
+  max-width: 1120px;
+  padding-top: 24px;
+  border-top: 2px solid var(--ink);
+  font-family: "Songti SC", "STSong", "PingFang SC", serif;
+  font-size: 34px;
+  line-height: 1.16;
+  font-weight: 800;
+}
+
+.questions {
+  max-width: 1040px;
+  border-left: 4px solid var(--clay);
+  padding-left: 26px;
+  display: grid;
+  gap: 12px;
+}
+
+.questions p {
+  color: #111827;
+  font-size: 20px;
+  line-height: 1.34;
+}
+
+.questions p b {
+  color: #111827;
+}
+
+.market-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+}
+
+.market-card {
+  min-height: 300px;
+  padding: 32px 36px;
+  border-top: 4px solid var(--muted);
+  background: rgba(255,255,255,0.25);
+}
+
+.market-card.accent {
+  border-color: var(--teal);
+}
+
+.market-title {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.market-line {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--faint);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.market-note {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.vertical-pipeline-layout {
+  margin-top: 22px;
+  height: 528px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 56px;
+  align-items: center;
+}
+
+.leaky-pipeline-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pipeline-bullets {
+  display: grid;
+  gap: 30px;
+  align-content: center;
+  max-width: 710px;
+}
+
+.pipeline-bullets p {
+  position: relative;
+  padding-left: 34px;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1.28;
+  font-weight: 800;
+}
+
+.pipeline-bullets p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 13px;
+  height: 13px;
+  background: var(--teal);
+}
+
+.pipeline-bullets p:nth-child(2)::before {
+  background: #ef4444;
+}
+
+.pipeline-bullets p:nth-child(3)::before {
+  background: #16a34a;
+}
+
+.feedback-clean {
+  margin-top: 82px;
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  gap: 46px;
+  align-items: stretch;
+}
+
+.feedback-event {
+  min-height: 260px;
+  padding: 34px 36px;
+  background: var(--dark);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedback-event span {
+  color: #d9e4f1;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.feedback-event b {
+  display: block;
+  margin-top: 18px;
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.feedback-event p {
+  margin-top: 22px;
+  color: #d9e4f1;
+  font-size: 21px;
+  line-height: 1.42;
+  font-weight: 700;
+}
+
+.feedback-signal-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.feedback-signal-line {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  align-items: start;
+  min-height: 118px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.32);
+  border-top: 4px solid var(--teal);
+}
+
+.feedback-signal-line:nth-child(2) {
+  border-color: var(--clay);
+}
+
+.feedback-signal-line > span {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.feedback-signal-line:nth-child(2) > span {
+  color: var(--clay);
+}
+
+.feedback-signal-line b {
+  display: block;
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+.feedback-signal-line p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.38;
+  font-weight: 700;
+}
+
+.feedback-bottom-line {
+  margin-top: 34px;
+  padding: 24px 30px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1.28;
+  font-weight: 800;
+  text-align: center;
+}
+
+.screen-layout {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.screen-layout.compact {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.mock-screen {
+  position: relative;
+  min-height: 390px;
+  padding: 24px;
+  background: #fbf8f1;
+  border: 2px dashed #b7aa99;
+  box-shadow: 0 18px 40px rgba(23,32,51,0.10);
+}
+
+.mock-top {
+  margin: -24px -24px 22px;
+  padding: 13px 18px;
+  background: var(--dark);
+  color: #d9e4f1;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.project-title {
+  font-size: 29px;
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.project-meta {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.project-meta span {
+  background: var(--teal-soft);
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #255c5d;
+}
+
+.mock-block {
+  margin-top: 22px;
+  background: linear-gradient(90deg, #e8dfd2 0 78%, transparent 78% 100%);
+}
+
+.mock-block.large {
+  height: 110px;
+}
+
+.skill-row {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+}
+
+.skill-row span {
+  padding: 8px 11px;
+  background: #efe5d6;
+  color: #736554;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.placeholder-note {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 18px;
+  color: #8a7d6d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.side-explain {
+  display: grid;
+  gap: 18px;
+}
+
+.side-item {
+  padding: 24px 26px;
+  border-top: 3px solid var(--teal);
+  background: rgba(255,255,255,0.26);
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.side-item b {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.mock-screen.bids {
+  min-height: 360px;
+}
+
+.proposal {
+  display: grid;
+  grid-template-columns: 42px 1fr 70px;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--faint);
+}
+
+.proposal.selected {
+  background: var(--teal-soft);
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-bottom: 0;
+}
+
+.proposal b {
+  font-size: 16px;
+}
+
+.proposal em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 13px;
+}
+
+.proposal strong {
+  text-align: right;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 16px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--clay-soft);
+  display: inline-block;
+}
+
+.proposal.selected .avatar {
+  background: var(--teal);
+}
+
+.olms-flow-layout {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 46px;
+  align-items: stretch;
+}
+
+.olms-steps {
+  display: grid;
+  grid-template-rows: auto 34px auto 34px auto;
+  align-items: stretch;
+}
+
+.olms-step-wrap {
+  position: relative;
+  min-height: 102px;
+}
+
+.olms-step {
+  position: absolute;
+  inset: 0;
+  min-height: 102px;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.32);
+  border: 3px solid var(--teal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.olms-step-base {
+  opacity: 0.34;
+}
+
+.olms-step-active {
+  opacity: 0;
+  box-shadow: 0 12px 28px rgba(23,32,51,0.08);
+}
+
+.olms-step-active.slidev-vclick-current {
+  opacity: 1 !important;
+}
+
+.olms-step-active.slidev-vclick-prior {
+  opacity: 0 !important;
+}
+
+.olms-step-active.slidev-vclick-hidden {
+  opacity: 0 !important;
+}
+
+.olms-step span {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.olms-step b {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: 27px;
+  line-height: 1.12;
+}
+
+.olms-step p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.olms-connector {
+  position: relative;
+}
+
+.olms-connector::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--faint);
+  transform: translateX(-50%);
+}
+
+.olms-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 15px solid var(--faint);
+  transform: translateX(-50%);
+}
+
+.olms-shot-stage {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  min-height: 420px;
+}
+
+.olms-shot {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #d8dbe8;
+  box-shadow: 0 14px 30px rgba(23,32,51,0.08);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.olms-shot-main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.olms-shot-default {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.olms-default-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.olms-shot-main {
+  z-index: 1;
+}
+
+.olms-shot-main.slidev-vclick-hidden,
+.olms-shot-main.slidev-vclick-prior {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.olms-shot-main.slidev-vclick-current {
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+.mock-browser {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  align-self: stretch;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fc;
+  box-sizing: border-box;
+}
+
+.mock-topbar {
+  width: 100%;
+  height: 46px;
+  flex: 0 0 46px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #28323d;
+  color: #ffffff;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  box-sizing: border-box;
+}
+
+.mock-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #9aa4b2;
+}
+
+.mock-topbar b {
+  margin-left: 10px;
+  font-size: 16px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.mock-topbar em {
+  margin-left: auto;
+  color: #c7d2fe;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.mock-panel {
+  margin: 22px 24px 14px;
+  padding: 24px 26px;
+  background: #ffffff;
+  border: 1px solid #dfe3ee;
+  box-shadow: 0 10px 24px rgba(43,54,72,0.08);
+}
+
+.mock-section-title {
+  color: var(--teal);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mock-browser h3 {
+  margin: 10px 0 12px;
+  color: var(--ink);
+  font-size: 26px;
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.mock-browser p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.mock-meta-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.mock-meta-row span,
+.mock-skill-row span,
+.mock-card,
+.mock-input-row,
+.mock-textarea,
+.mock-proposal,
+.mock-result {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.mock-meta-row span {
+  padding: 10px 11px;
+  color: #44505d;
+  background: #f1f4ff;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.mock-skill-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mock-skill-row span {
+  padding: 8px 10px;
+  color: var(--teal);
+  border: 1px solid #c7d2fe;
+  background: #eef2ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mock-grid {
+  margin: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mock-card {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e1e5ef;
+}
+
+.mock-card b {
+  display: block;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.mock-card span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mock-bid-layout {
+  flex: 1;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 18px;
+}
+
+.mock-bid-form,
+.mock-proposals,
+.mock-outcome,
+.mock-result-list {
+  background: #ffffff;
+  border: 1px solid #dfe3ee;
+  box-shadow: 0 10px 24px rgba(43,54,72,0.08);
+}
+
+.mock-bid-form {
+  padding: 24px;
+}
+
+.mock-input-row {
+  margin-top: 14px;
+  padding: 13px 15px;
+  display: flex;
+  justify-content: space-between;
+  background: #f6f7fb;
+  border: 1px solid #e2e6f0;
+}
+
+.mock-input-row span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mock-input-row b {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.mock-textarea {
+  margin-top: 14px;
+  min-height: 92px;
+  padding: 15px;
+  color: var(--muted);
+  background: #fbfcff;
+  border: 1px solid #e2e6f0;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.mock-proposals {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock-proposal {
+  min-height: 72px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  background: #f7f8fc;
+  border: 1px solid #e2e6f0;
+}
+
+.mock-proposal.marked {
+  background: #eef2ff;
+  border-color: var(--teal);
+}
+
+.mock-proposal i {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.mock-proposal.marked i {
+  background: var(--teal);
+}
+
+.mock-proposal span {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.mock-proposal b {
+  color: var(--teal);
+  font-size: 15px;
+}
+
+.mock-outcome {
+  margin: 24px 24px 14px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  gap: 22px;
+  align-items: center;
+}
+
+.mock-winner-card {
+  min-height: 66px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #eef2ff;
+  border: 2px solid var(--teal);
+}
+
+.mock-winner-card span,
+.mock-winner-card em {
+  color: var(--muted);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mock-winner-card b {
+  margin: 0 0 6px;
+  color: var(--teal);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.mock-result-list {
+  margin: 0 24px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.mock-result {
+  padding: 13px 16px;
+  display: flex;
+  justify-content: space-between;
+  background: #f7f8fc;
+  border: 1px solid #e2e6f0;
+}
+
+.mock-result.selected {
+  background: #eef2ff;
+  border-color: var(--teal);
+}
+
+.mock-result span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.mock-result b {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.mock-result.selected b {
+  color: var(--teal);
+}
+
+.feedback-flow {
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.feedback-node {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: rgba(255,255,255,0.28);
+  border-top: 3px solid var(--teal);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.feedback-node.success {
+  border-color: var(--clay);
+}
+
+.feedback-arrow {
+  text-align: center;
+  color: var(--clay);
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.model-strip {
+  position: absolute;
+  left: 92px;
+  right: 92px;
+  bottom: 84px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.model-strip > div {
+  min-height: 110px;
+  padding: 24px 28px;
+  background: var(--dark);
+  color: #d9e4f1;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.model-strip b {
+  color: white;
+  font-size: 22px;
+}
+
+.outcomes.compact .outcome {
+  min-height: 176px;
+}
+
+/* Slide 10 panel design. Adjust these variables to tune colors and animation timing. */
+.panel-structure-title {
+  margin-top: 26px;
+  max-width: 1080px;
+  color: var(--ink);
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.panel-structure-canvas {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  top: 156px;
+  height: 470px;
+}
+
+.panel-structure-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+/* v-click reveal behavior: fades and slides new objects into place. */
+.panel-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.panel-reveal.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.panel-zone {
+  stroke-width: 1.5;
+}
+
+.panel-feedback-zone {
+  fill: #dbeafe;
+  stroke: #2563eb;
+  opacity: 0.74;
+}
+
+.panel-outcome-zone {
+  fill: #fed7aa;
+  stroke: #ea580c;
+  opacity: 0.82;
+}
+
+.panel-zone-label {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.panel-feedback-text {
+  fill: #2563eb;
+}
+
+.panel-outcome-text {
+  fill: #ea580c;
+}
+
+.panel-axis {
+  stroke: #6b7280;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.panel-marker circle {
+  fill: #ffffff;
+  stroke: #6b7280;
+  stroke-width: 3;
+}
+
+.panel-marker text {
+  fill: #4b5563;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.panel-marker.emphasized circle {
+  fill: #ffffff;
+  stroke: #111827;
+  stroke-width: 4;
+}
+
+.panel-marker.emphasized text {
+  fill: #111827;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.panel-marker.outcome circle {
+  stroke: #ea580c;
+}
+
+.panel-marker.continuation text {
+  fill: #6b7280;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.panel-callout-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.panel-callout-line.feedback {
+  stroke: #2563eb;
+}
+
+.panel-callout-line.outcome {
+  stroke: #ea580c;
+}
+
+.panel-callout {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.panel-callout.feedback {
+  fill: #2563eb;
+}
+
+.panel-callout.outcome {
+  fill: #ea580c;
+}
+
+.panel-predict-arrow {
+  fill: none;
+  stroke: #374151;
+  stroke-width: 3;
+  stroke-linecap: round;
+  marker-end: url(#panel-arrow-orange);
+}
+
+.panel-predict-label {
+  fill: #374151;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.panel-fe-note {
+  text-anchor: middle;
+  fill: var(--ink);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* Cleaner replacement for slide 10: two cards over a single panel timeline. */
+.panel-clean-title {
+  margin-top: 26px;
+  max-width: 1060px;
+  color: var(--ink);
+  font-size: 35px;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.panel-clean-canvas {
+  position: absolute;
+  left: 58px;
+  right: 58px;
+  top: 158px;
+  height: 468px;
+}
+
+.panel-clean-axis {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 28px;
+  width: calc(100% - 68px);
+  height: 170px;
+  overflow: visible;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.clean-axis-line {
+  stroke: #9ca3af;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.65;
+}
+
+.clean-window rect {
+  fill: #ffffff;
+  stroke: #6b7280;
+  stroke-width: 2.2;
+}
+
+.clean-window text {
+  fill: #4b5563;
+  font-size: 19px;
+  font-weight: 900;
+  text-anchor: middle;
+}
+
+.clean-window.emphasized rect {
+  fill: #ffffff;
+  stroke-width: 4;
+}
+
+.clean-window.emphasized text {
+  fill: #111827;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.clean-window.emphasized.feedback rect {
+  stroke: #2563eb;
+}
+
+.clean-window.emphasized.outcome rect {
+  stroke: #ea580c;
+}
+
+.clean-ellipsis {
+  fill: #6b7280;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.clean-axis-zone {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.clean-axis-zone.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.clean-axis-zone rect {
+  stroke-width: 1.8;
+}
+
+.clean-axis-zone text {
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.clean-axis-zone.feedback rect {
+  fill: rgba(219,234,254,0.72);
+  stroke: #2563eb;
+}
+
+.clean-axis-zone.feedback text {
+  fill: #2563eb;
+}
+
+.clean-axis-zone.outcome rect {
+  fill: rgba(254,215,170,0.8);
+  stroke: #ea580c;
+}
+
+.clean-axis-zone.outcome text {
+  fill: #ea580c;
+}
+
+.panel-window-note {
+  position: absolute;
+  left: 120px;
+  right: 120px;
+  bottom: -16px;
+  color: #111827;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-align: center;
+}
+
+.panel-window-note sup {
+  font-size: 0.6em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.panel-footnote {
+  max-width: 860px;
+  color: #7b8492;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.panel-clean-zone,
+.panel-clean-arrow,
+.panel-clean-note {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.panel-clean-zone.slidev-vclick-hidden,
+.panel-clean-arrow.slidev-vclick-hidden,
+.panel-clean-note.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.panel-clean-zone {
+  position: absolute;
+  top: 42px;
+  min-height: 156px;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 16px 34px rgba(23,32,51,0.08);
+}
+
+.panel-clean-zone.feedback {
+  left: 58px;
+  width: 610px;
+  background: rgba(219,234,254,0.78);
+  border-color: #93c5fd;
+  border-top: 5px solid #2563eb;
+}
+
+.panel-clean-zone.outcome {
+  right: 58px;
+  width: 340px;
+  background: rgba(254,215,170,0.82);
+  border-color: #fdba74;
+  border-top: 5px solid #ea580c;
+}
+
+.zone-eyebrow {
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.panel-clean-zone.feedback .zone-eyebrow,
+.panel-clean-zone.feedback h3 {
+  color: #2563eb;
+}
+
+.panel-clean-zone.outcome .zone-eyebrow,
+.panel-clean-zone.outcome h3 {
+  color: #ea580c;
+}
+
+.panel-clean-zone h3 {
+  margin: 11px 0 14px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.zone-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.panel-clean-zone.feedback .zone-pills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metric-chip {
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.78);
+  color: var(--ink);
+  border: 1px solid rgba(37,99,235,0.22);
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.metric-chip b {
+  display: block;
+  font-size: 15px;
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.metric-chip em {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.15;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.outcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.outcome-grid .metric-chip {
+  border-color: rgba(234,88,12,0.28);
+  padding: 8px 9px;
+}
+
+.outcome-grid .metric-chip b {
+  font-size: 13px;
+}
+
+.outcome-grid .metric-chip em {
+  font-size: 11px;
+}
+
+.panel-clean-arrow {
+  position: absolute;
+  left: 684px;
+  top: 112px;
+  width: 80px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+  font-family: "Avenir Next", "PingFang SC", sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.panel-clean-arrow span {
+  flex: 0 0 auto;
+}
+
+.panel-clean-arrow i {
+  position: relative;
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, #374151, #ea580c);
+}
+
+.panel-clean-arrow i::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 13px solid #ea580c;
+  transform: translateY(-50%);
+}
+
+.panel-clean-note {
+  position: absolute;
+  left: 250px;
+  right: 250px;
+  bottom: 0;
+  padding: 12px 20px;
+  background: var(--dark);
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: center;
+}
+
+.panel-clean-note span {
+  color: #c7d2fe;
+}
+
+/* Final typography pass.
+   PPT conversion: 48px = 36pt; 26.667px = 20pt.
+   Result tables and footnotes are intentionally left out. */
+:root {
+  --slide-title-size: 48px;
+  --slide-body-size: 26.667px;
+  --slide-body-font: "Inter", "Avenir Next", "PingFang SC", sans-serif;
+}
+
+.slidev-layout .page h1.claim,
+.slidev-layout .page h2.claim,
+.slidev-layout .page .panel-structure-title,
+.slidev-layout .page .panel-clean-title {
+  font-family: "Inter", "Avenir Next", "PingFang SC", sans-serif !important;
+  font-size: var(--slide-title-size) !important;
+  line-height: 1.08 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+}
+
+.slidev-layout .page > p,
+.slidev-layout .page .support,
+.slidev-layout .page .pipeline-bullets p,
+.slidev-layout .page .feedback-event b,
+.slidev-layout .page .feedback-event p,
+.slidev-layout .page .feedback-signal-line b,
+.slidev-layout .page .feedback-signal-line p,
+.slidev-layout .page .feedback-bottom-line,
+.slidev-layout .page .olms-step b,
+.slidev-layout .page .research-questions p,
+.slidev-layout .page .theory-bullet b,
+.slidev-layout .page .theory-bullet p,
+.slidev-layout .page .hypo .text,
+.slidev-layout .page .data-overview-copy,
+.slidev-layout .page .panel-window-note,
+.slidev-layout .page .quote,
+.slidev-layout .page .questions p {
+  font-family: var(--slide-body-font) !important;
+  font-size: var(--slide-body-size) !important;
+}

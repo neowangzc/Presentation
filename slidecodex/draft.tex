@@ -1,0 +1,349 @@
+\documentclass[12pt]{article}
+
+% === Packages ===
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pdflscape}
+\usepackage{rotating}
+% === Title ===
+\title{\textbf{Success Discounted, Failure Amplified: Asymmetric Gendered Feedback in Online Labor Markets}}
+\author{
+  Wang Zhichao\thanks{Graduate School of Arts and Letters, Tohoku University. Email: \texttt{wang.zhichap.p2@dc.tohoku.ac.jp}} \and
+  Lyu Zeyu\thanks{Graduate School of Arts and Letters, Tohoku University. Email: \texttt{lyu.zeyu.e8@tohoku.ac.jp}}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+% ============================================================
+% INTRODUCTION
+% ============================================================
+\section{Introduction}
+
+The underrepresentation of women in male-typed job domains remains a structural source of occupational gender inequality. Although women's entry into many male-typed occupations has increased over the past several decades~\citep{england2010gender, jacobs2004time}, entry alone has not eliminated segregation. Women often leave male-typed fields at higher rates than men, producing what prior research describes as a ``leaky pipeline'' that offsets the gains of women's initial entry~\citep{blickenstaff2005women, hunt2016women, hewlett2008athena}. Yet less is known about the processes through which such leakage occurs after women enter male-typed labor markets.
+
+We argue that post-entry leakage is shaped through employer feedback. In traditional labor markets, these processes are difficult to observe because workers change jobs infrequently and their career adjustments are often difficult to track.
+Online labor markets make these process especially visible. Freelancers repeatedly apply for short-term projects, receive employer decisions, and can quickly adjust where they apply next~\citep{leung2017learning, leung2018taking}. Employer accept and rejection therefore do not merely determine immediate earnings; they provide signals that may shape workers' subsequent commitment to particular domains. This setting allows us to ask how women respond to success and failure after entering a male-typed domain.
+
+In male-typed domains, employer feedback is interpreted against a gendered background. Women may be aware that employers undervalue female workers in male-typed tasks~\citep{murcianogoroff2021missing, correll2004constraints, wynn2018puncturing, brands2017leaning, barbulescu2013women}, and they may also hold lower domain-specific self-assessments because cultural beliefs associate technical competence more strongly with men than with women~\citep{correll2001gender, eccles1994understanding, charles2009indulging, ridgeway2011framed}. Success in this context need not carry a strong positive signal for women. A win can sustain women's participation in the broader platform labor market, but it may be discounted as an exception, an employer-specific match, or insufficient evidence of domain belonging~\citep{foschi2000double}. Success in a setting where women are a structural minority does not generate the same returns it generates for dominant members of the group~\citep{kanter1977men}. Failure, by contrast, can carry a double negative signal: the market may be unreceptive, and the worker may not fit the domain. In this sense, success is discounted while failure is amplified.
+
+We evaluate this argument using longitudinal bidding histories from Freelancer.com, a global online labor platform. The setting is well suited to our question because workers repeatedly bid for projects, receive observable employer decisions, and can reallocate bids across job categories. Using data from 2000 to 2017, we analyze more than 3.1 million bids by over 446,000 freelancers on more than 455,000 projects. 
+Our primary analysis focuses on freelancers who begin in IT \& Programming, our focal male-typed domain, in which women constitute only 11.7\% of freelancers(the lowest female share among all platform categories). We examine how success and failure are associated with four worker outcomes: total bid volume, focal-domain bid share, first outside-domain bid, and focal-domain exit. To test whether the asymmetric pattern we observe is conditional on the gender typing of the domain rather than a general gender difference in how workers respond to feedback, we then conduct the same analyses on freelancers who begin in Writing \& Translation, a female-typed comparison domain in which women constitute 44.9\% of freelancers(the highest female share on the platform).
+
+The results reveal a clear asymmetry. In IT, accumulated success is associated with greater overall bidding among women and a lower probability of ceasing IT applications. Even so, women remain more likely than men to shift their effort toward other domains after winning: they gain less IT bid share and receive weaker protection against first movement outside IT. Failure, by contrast, accelerates women's exploration of categories outside IT relative to men's, and at sufficiently high cumulative cost pushes them to cease IT applications altogether more readily than men. These patterns are absent or reversed in Writing. The findings show that the leaky pipeline in male-typed online labor markets operates not through women stopping work, but through gendered reallocation: success keeps women active on the platform without restoring their concentration in the male-typed domain, while failure accelerates their departure from that domain and eventually drives them to abandon it altogether. This paper contributes to research on occupational gender segregation by showing that success and failure are not symmetric feedback signals in gendered labor markets, and that inequality is reproduced through asymmetric feedback-driven reallocation away from male-typed work.
+
+
+
+
+
+
+
+
+% ============================================================
+% BACKGROUND AND THEORY
+% ============================================================
+\section{Background and Theory}
+
+
+Employer feedback is not interpreted in a social vacuum. When gender becomes salient in a male-typed task, observers and actors alike apply double standards of competence: a woman's positive performance is held to a higher evidentiary bar before being read as ability, while her negative performance is more readily read as confirmation of expected lower competence~\citep{foschi2000double, ridgeway2011framed, heilman2005nocredit}. We bring this framework to bear on how employer approval and rejection shape women's subsequent commitment to a male-typed labor market.
+
+Two interpretive resources shape how women in male-typed domains read each employer decision. First, women are typically aware that employers tend to undervalue female workers with male-typed skills, credentials, or aspirations~\citep{murcianogoroff2021missing, correll2004constraints, wynn2018puncturing}, an awareness reinforced by their own and others' experiences of rejection~\citep{petersen2004opportunity, reskin1999job, brands2017leaning, barbulescu2013women}. Second, women often enter these domains with lower domain-specific self-assessments, because widely shared cultural beliefs associate technical competence more strongly with men~\citep{correll2001gender, eccles1994understanding, charles2009indulging, ridgeway2011framed}; even among women who do enter male-typed fields, self-assessed competence lags behind that of men with equivalent credentials and performance~\citep{sterling2020confidence}. We refer to the combined process as \emph{gendered feedback interpretation}: the same employer decision can simultaneously provide information about market receptivity and about a woman's fit for the domain, and the diagnostic weight a woman places on each signal may differ from that placed by an otherwise similar man.
+
+Two implications follow for the returns to accumulated success. First, a single win provides weaker evidence to revise a gendered prior: it may be discounted as a favorable exception, an employer-specific match, or a low-threshold task that does not generalize. Experimental and meta-analytic evidence confirms that the same observed achievements yield smaller rewards for women than for men in male-typed contexts~\citep{joshi2015gap}, and that this gap is magnified precisely in evaluation environments --- like online platforms --- where information about candidates is sparse and employers face uncertainty about quality~\citep{botelho2017pursuing}. Second, this interpretive discount has a structural parallel: as Kanter's classic account of token women shows, individual success in a setting where one's gender group is a small minority does not generate the standard returns it generates for dominant members, because heightened visibility, performance pressure, and assimilation to stereotype together filter each achievement through the token position~\citep{kanter1977men}. Wins thus need not produce the same domain-anchoring signal for women in male-typed work that they produce for men.
+
+\medskip
+\noindent\textbf{Hypothesis 1 (Discounted Success).} \textit{In male-typed job domains, the returns to accumulated success will be weaker for women than for men.}
+\medskip
+
+The mirror argument applies to failure, but with an opposite directional pull. For men, rejection in a male-typed project may be interpreted primarily as an ordinary market outcome: a competitive project was lost to another bidder. For women, the same rejection can be read through both interpretive channels at once --- as evidence that the market is unreceptive \emph{and} as confirmation of pre-existing doubts about competence in the field. The behavioral consequences of this dual diagnosis are well documented. Women disproportionately withdraw from competitive male-typed environments after exposure to negative feedback~\citep{niederle2007women}, withhold contributions in male-typed task domains when their competence is uncertain~\citep{coffman2014evidence}, and exit male-typed careers at higher rates when their sense of fit with the domain comes under stress~\citep{cech2013self}. The response operates through redirection rather than uniform reduction in job-seeking effort: women in male-typed online labor markets are more likely to reallocate their applications away from the focal domain under accumulated rejection than to stop applying for work altogether~\citep{yang2025approaching}.
+
+\medskip
+\noindent\textbf{Hypothesis 2 (Amplified Failure).} \textit{In male-typed job domains, the negative consequences of accumulated failure will be stronger for women than for men.}
+\medskip
+
+
+The interpretive resources that motivate Hypotheses 1 and 2 should depend on the gender typing of the domain itself. Status characteristics theory specifies that the asymmetric inferences activated by gender operate when the task is culturally stereotyped along gender lines~\citep{ridgeway2011framed, schmader2008integrated}; when the domain is female-typed, women are not positioned as outsiders and the same evaluative templates do not apply. Sociological work on occupational sex segregation has long emphasized that the sex composition of a job --- who ``belongs'' there --- is itself a causal moderator of gendered evaluation~\citep{reskin1990job, acker1990hierarchies}: gendered organizations and queueing dynamics make the same individual either visible and scrutinized or routine and unremarkable, depending on whether she occupies her typed home or a numerically dominated minority position. This implies a scope condition: women in female-typed domains should not approach feedback from a position of lower perceived fit or heightened bias awareness, and their interpretation of success and failure should resemble that of men in the same domain. A comparison with a female-typed domain therefore lets us distinguish a general gender difference in how workers respond to feedback from a domain-specific process rooted in male-typed work.
+
+\medskip
+\noindent\textbf{Hypothesis 3 (Domain Gender-Typing).} \textit{The gendered asymmetry in responses to success and failure will emerge primarily in domains where women are underrepresented.}
+\medskip
+
+
+
+
+\section{Data and Methods}
+
+\subsection{Hiring Process in Online Labor Markets}
+The hiring process on Freelancer.com begins with an employer posting a project on the platform. Projects include a description of the work, the expected duration, a budget range, and required skills (see Figure~\ref{fig:posting}). 
+Projects are classified under 12 job categories\footnote{The twelve categories are: Websites, IT \& Software; Design, Media \& Architecture; Writing \& Content; Translation \& Languages; Mobile Phones \& Computing; Data Entry \& Admin; Sales \& Marketing; Engineering \& Science; Business, Accounting, Human Resources \& Legal; Product Sourcing \& Manufacturing; Local Jobs \& Services; and Other.}, which freelancers use to search for work. Once a project is posted, any freelancer can submit a proposal indicating their bidding price, estimated timeline, and a brief pitch of their qualifications (see Figure~\ref{fig:proposals}). Then, employers review all proposals and award the project to a selected freelancer for completion.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{images/project.png}
+\caption{Sample project on Freelancer.com.}
+\label{fig:posting}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{images/bids.png}
+\caption{Proposal page for a sample project.}
+\label{fig:proposals}
+\end{figure}
+
+\subsection{Data}
+
+We use platform data spanning 2000 to 2017, tracking the complete bidding histories of 446,471 freelancers across 455,497 projects and 3.16 million bids. We focus on two domains at opposite ends of the gender-typing spectrum: IT \& Programming (the platform's ``Websites, IT \& Software'' category), our focal male-typed domain, and Writing \& Translation (combining ``Writing \& Content'' and ``Translation \& Languages''), our female-typed comparison~\citep{baird2012going, correll2001gender, gorman2005gender}. Following \citet{yang2025approaching}, workers are classified as `IT starters' or `Writing starters' based on the job category of their first bid and tracked through their first two years on the platform.
+
+We construct biweekly panels because employers typically post, collect proposals over several days, and select a winner within one to two weeks, making this the natural unit for observing freelancers' response to outcomes~\citep{yang2025approaching}. The sample is restricted to freelancers with at least two bids (required for individual fixed effects). The final dataset consists of 44,161 IT starters (662,505 biweekly observations) and 32,319 Writing starters (351,661 biweekly observations). Each bid's outcome is assigned to the biweekly window in which the employer's selection becomes known to all bidders, ensuring that the feedback variables reflect information the worker actually possesses at each point in time.
+
+
+\subsection{Variables}
+
+\subsubsection{Dependent Variables}
+
+We measure persistence in and around the focal domain through four worker-window outcomes. \textit{Total bid volume} is the number of bids placed across all job categories during each biweekly window, capturing overall platform activity and distinguishing reduced job search from reallocation across domains. \textit{Domain share} is the proportion of bids placed in the focal domain that window; a declining share indicates a shift of effort toward other categories even when total volume is unchanged. \textit{First outside-domain bid} is a binary indicator equal to 1 in the window when a worker first bids outside the starting domain, and 0 in all prior windows; observations after this first move are dropped so the model captures only the initial departure. \textit{Focal-domain exit} captures ceasing to apply for jobs in the focal domain. It is a binary indicator equal to 1 in the window containing the worker's last focal-domain bid, provided no further focal-domain bids are observed for at least two subsequent biweekly windows (approximately one month of focal-domain inactivity, an interval long enough that absence is unlikely to reflect ordinary fluctuation in search activity for an active job seeker). Workers whose final focal-domain bid falls within the last two windows of the observation period are not coded as exits, since we cannot distinguish genuine cessation from right-censoring. A focal-domain exit does not require leaving the platform: a worker may cease applying in the focal domain while continuing to bid in other categories.
+
+\subsubsection{Independent Variables}
+
+Our key independent variables are two measures of cumulative domain feedback, each interacted with worker gender. \textit{Cumulative domain wins} is the count of focal-domain bids that resulted in selection by the employer, cumulated over all prior windows. Because the distribution of wins is highly skewed, we use $\log(1 + cum\_wins_{it})$ as our primary specification. \textit{Failure rate} is the proportion of a worker's past focal-domain bids that did not result in selection, computed cumulatively over all domain bids with known outcomes prior to the current window. A worker with a failure rate of 0.90 has been rejected on 90\% of their past domain bids.
+
+\textit{Gender} is inferred from freelancers' profile photographs using Qwen VL, a multimodal large language model. The classifier first detects whether the photo contains a human face, then classifies detected faces as male or female; photos without a detectable face (typically company logos or stock images) or with ambiguous features were excluded. Manual validation on a random sample of 500 photos yielded approximately 99.9\% agreement. In IT \& Programming, women constitute 11.7\% of freelancers (5,179 of 44,161); in Writing \& Translation, 44.9\% (14,503 of 32,319). Gender is coded 1 for female and 0 for male.
+
+\subsubsection{Control Variables}
+
+We control for worker-level experience (cumulative number of domain bids placed to date) and for time-varying market conditions in the focal domain (number of new projects posted and number of applicants bidding in the focal domain during the window), which absorb period-level fluctuations in platform activity that might otherwise correlate with worker behavior.
+
+\subsection{Empirical Strategy}
+
+We organize our analyses in two sections. First, we examine the micro-level association between prior employer feedback and subsequent job seeking among IT \& Programming starters, asking whether accumulated success and failure differently shape men's and women's persistence in this male-typed domain across the four outcomes defined above. We present the success models first, then the failure models. Second, we replicate the analyses on Writing \& Translation, a traditionally female-typed domain, to test whether the gendered patterns observed in IT are specific to women's position in a male-typed setting.
+
+We estimate linear fixed-effects models with worker fixed effects for all four outcomes (linear probability models for the two binary outcomes, which keep the interaction directly interpretable). The key predictors are cumulative domain feedback --- log cumulative wins in success models, cumulative failure rate in failure models --- and its interaction with female. Worker fixed effects absorb time-invariant differences across freelancers, such as baseline ability, reputation, or initial attachment to a domain, that might otherwise confound the gender comparison. Because gender does not vary within workers, the main effect of female is absorbed by the fixed effect; the female-by-feedback interaction remains identified by within-worker variation in feedback over time, capturing whether the within-worker association between accumulated feedback and subsequent persistence differs for women and men. Standard errors are clustered at the worker level.
+
+
+% ============================================================
+% RESULTS
+% ============================================================
+\section{Results}
+
+\subsection{Descriptive Statistics}
+
+Table~\ref{tab:desc_it} reports summary statistics by gender for IT starters. Women place more total bids per biweekly window than men (1.70 vs.\ 0.87) and more IT bids (0.91 vs.\ 0.63), yet allocate a substantially lower share to IT (0.63 vs.\ 0.78); they are also more likely to place their first bid outside IT in any given window (5.1\% vs.\ 3.2\%) and to cease IT applications altogether (7.2\% vs.\ 6.3\%). Notably, cumulative win counts and failure rates are similar across genders (1.73 vs.\ 1.83 wins, 0.69 vs.\ 0.68 failure rate), so the gender gaps in persistence outcomes cannot be attributed to women receiving worse raw market feedback.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics: IT \& Programming (Male-typed Domain)}
+\label{tab:desc_it}
+\small
+\begin{tabular}{lcc}
+\hline\hline
+\multicolumn{3}{l}{\textit{Panel A. Female}} \\
+\hline
+Variables & Mean & SD \\
+\hline
+No.\ of total bids biweekly & 1.70 & 7.31 \\
+No.\ of domain bids biweekly & 0.91 & 3.16 \\
+Domain share & 0.63 & 0.41 \\
+First outside-domain bid (0/1) & 0.05 & 0.22 \\
+Focal-domain exit (0/1) & 0.07 & 0.26 \\
+Failure rate to date & 0.69 & 0.40 \\
+Cum.\ domain wins to date & 1.73 & 5.17 \\
+Cum.\ domain bids to date & 14.79 & 48.78 \\
+No.\ of applicants in IT these 2 weeks & 6,358 & 4,158 \\
+No.\ of jobs available in IT these 2 weeks & 957 & 531 \\
+\hline
+\multicolumn{3}{l}{\textit{Panel B. Male}} \\
+\hline
+Variables & Mean & SD \\
+\hline
+No.\ of total bids biweekly & 0.87 & 2.83 \\
+No.\ of domain bids biweekly & 0.63 & 2.08 \\
+Domain share & 0.78 & 0.36 \\
+First outside-domain bid (0/1) & 0.03 & 0.18 \\
+Focal-domain exit (0/1) & 0.06 & 0.24 \\
+Failure rate to date & 0.68 & 0.39 \\
+Cum.\ domain wins to date & 1.83 & 5.24 \\
+Cum.\ domain bids to date & 10.85 & 35.69 \\
+No.\ of applicants in IT these 2 weeks & 5,665 & 4,187 \\
+No.\ of jobs available in IT these 2 weeks & 872 & 545 \\
+\hline\hline
+\multicolumn{3}{p{0.75\textwidth}}{
+\footnotesize \textit{Note.} $N = 69{,}090$ biweekly observations for 5,179 women; $N = 593{,}415$ for 38,982 men.
+} \\
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{Success and Women's Persistence in IT}
+
+H1 predicts that the returns to accumulated success will be weaker for women than for men in male-typed IT. Table~\ref{tab:table2} reports the four outcomes.
+
+Log cumulative wins have a significant positive main effect on total bidding ($\beta = 0.305$, $p < .001$, Model 1), indicating that accumulated wins boost freelancers' subsequent overall job-seeking activity. In Model 2 of Table~\ref{tab:table2}, we add the interaction between female and log cumulative wins. The main effect of wins remains positive and significant ($\beta = 0.243$, $p < .001$), and the interaction between wins and female is large, positive, and significant ($\beta = 0.681$, $p < .01$). A woman who accumulates wins becomes substantially more active in her overall job seeking than a man with the same win history.
+
+Log cumulative wins also have a significant positive main effect on IT bid share ($\beta = 0.090$, $p < .001$, Model 3), indicating that wins concentrate freelancers' effort in the focal domain. In Model 4, the main effect remains positive and significant ($\beta = 0.092$, $p < .001$), but the interaction between wins and female is negative and significant ($\beta = -0.020$, $p < .001$). The same wins do not anchor women in IT to the same degree they anchor men.
+
+Log cumulative wins have a significant negative main effect on first movement outside IT ($\beta = -0.041$, $p < .001$, Model 5), indicating that wins delay freelancers' first venture into other categories. In Model 6, the main effect remains negative and significant ($\beta = -0.044$, $p < .001$), but the interaction between wins and female is positive and significant ($\beta = 0.056$, $p < .001$), eliminating the anchoring effect of wins for women. Wins do not slow women's exploration of other categories at all --- a woman who has won repeatedly is no more anchored to IT than a woman who has not.
+
+Finally, log cumulative wins have a statistically significant negative main effect on focal-domain exit ($\beta = -0.056$, $p < .001$, Model 7), indicating that wins reduce the probability of ceasing IT applications altogether. In Model 8, the main effect remains negative and significant ($\beta = -0.055$, $p < .001$), and the interaction between wins and female is also negative and significant ($\beta = -0.009$, $p < .01$). Wins protect both genders from fully quitting IT, and slightly more so for women.
+
+Taken together, wins do not fail to engage women in IT. They fail to concentrate that engagement in IT to the same degree they do for men.
+The four outcomes describe the asymmetric return profile H1 predicts: success keeps women bidding and on the platform without improving their commitment to IT. Rather than reversing the gendered domain gap, wins leave it largely intact.
+
+\begin{sidewaystable}
+\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Log Cumulative Wins and Gendered Career Responses: IT \& Programming (Male-typed Domain)}
+\label{tab:table2}
+\small
+\begin{tabular}{lcccccccc}
+\hline\hline
+  & \multicolumn{2}{c}{Total bids} & \multicolumn{2}{c}{Domain share} & \multicolumn{2}{c}{First outside bid} & \multicolumn{2}{c}{Focal-domain exit} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-9}
+  & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+\hline
+Log cum.\ wins & $0.3049^{***}$ & $0.2429^{***}$ & $0.0903^{***}$ & $0.0923^{***}$ & $-0.0410^{***}$ & $-0.0441^{***}$ & $-0.0557^{***}$ & $-0.0549^{***}$ \\
+  & $(0.0630)$ & $(0.0651)$ & $(0.0026)$ & $(0.0026)$ & $(0.0022)$ & $(0.0022)$ & $(0.0014)$ & $(0.0014)$ \\[4pt]
+Female $\times$ Log cum.\ wins &  & $0.6806^{**}$ &  & $-0.0198^{***}$ &  & $0.0563^{***}$ &  & $-0.0087^{**}$ \\
+  &  & $(0.2619)$ &  & $(0.0051)$ &  & $(0.0128)$ &  & $(0.0026)$ \\[4pt]
+Log cum.\ bids & $-0.3620^{***}$ & $-0.3673^{***}$ & $-0.0914^{***}$ & $-0.0912^{***}$ & $0.0913^{***}$ & $0.0913^{***}$ & $0.0782^{***}$ & $0.0782^{***}$ \\
+  & $(0.0455)$ & $(0.0453)$ & $(0.0017)$ & $(0.0017)$ & $(0.0014)$ & $(0.0014)$ & $(0.0011)$ & $(0.0011)$ \\[4pt]
+N applicants (1,000s) & $0.0401^{*}$ & $0.0370^{*}$ & $-0.0034^{\dagger}$ & $-0.0032^{\dagger}$ & $0.0116^{***}$ & $0.0116^{***}$ & $0.0221^{***}$ & $0.0222^{***}$ \\
+  & $(0.0167)$ & $(0.0164)$ & $(0.0019)$ & $(0.0019)$ & $(0.0007)$ & $(0.0007)$ & $(0.0006)$ & $(0.0006)$ \\[4pt]
+N jobs available (1,000s) & $0.4516^{***}$ & $0.4809^{***}$ & $0.0152$ & $0.0133$ & $-0.0668^{***}$ & $-0.0667^{***}$ & $-0.1622^{***}$ & $-0.1626^{***}$ \\
+  & $(0.1276)$ & $(0.1267)$ & $(0.0141)$ & $(0.0141)$ & $(0.0054)$ & $(0.0054)$ & $(0.0046)$ & $(0.0046)$ \\[4pt]
+\hline
+Individual FE & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+$N$ (observations) & 662,505 & 662,505 & 195,363 & 195,363 & 406,919 & 406,919 & 662,505 & 662,505 \\
+$N$ (workers) & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 \\
+$R^2$ (within) & 0.0065 & 0.0074 & 0.0305 & 0.0307 & 0.0370 & 0.0373 & 0.0284 & 0.0284 \\
+\hline\hline
+\multicolumn{9}{p{0.95\textheight}}{
+\footnotesize \textit{Note.} All models include worker fixed effects via within-transformation. Standard errors clustered at the worker level are in parentheses. Odd-numbered columns show the baseline model; even-numbered columns add the Female $\times$ key feedback interaction. Domain: IT \& Programming (male-typed). $\dagger$ $p < .10$, * $p < .05$, ** $p < .01$, *** $p < .001$.
+} \\
+\end{tabular}
+\end{sidewaystable}
+
+
+
+
+
+
+
+\subsection{Failure and Women's Persistence in IT}
+
+H2 predicts that the negative consequences of accumulated failure will be stronger for women than for men in male-typed IT. Table~\ref{tab:table3} reports the four outcomes.
+
+Failure rate (the share of past IT bids that did not result in selection) has a significant negative main effect on total bidding ($\beta = -1.161$, $p < .001$, Model 1), indicating that accumulated rejection reduces freelancers' subsequent overall job-seeking activity. In Model 2 of Table~\ref{tab:table3}, we add the interaction between female and failure rate. The main effect remains negative and significant ($\beta = -1.168$, $p < .001$), but the interaction between failure rate and female is small and insignificant ($\beta = 0.064$, $p = .635$). Higher accumulated failure reduces overall bidding by similar amounts for women and men.
+
+Failure rate also has a significant negative main effect on IT bid share ($\beta = -0.190$, $p < .001$, Model 3), indicating that rejections push freelancers' effort out of the focal domain. In Model 4, the main effect remains negative and significant ($\beta = -0.180$, $p < .001$), and the interaction between failure rate and female is also negative and significant ($\beta = -0.086$, $p < .001$). The same accumulated rejections push women's effort away from IT noticeably faster than they push men's.
+
+Failure rate has a significant positive main effect on first movement outside IT ($\beta = 0.089$, $p < .001$, Model 5), indicating that rejection accelerates freelancers' first venture into other categories. In Model 6, the main effect remains positive and significant ($\beta = 0.083$, $p < .001$), and the interaction between failure rate and female is also positive and significant ($\beta = 0.061$, $p < .001$). Women who have failed move outside IT noticeably earlier than men with the same failure history.
+
+Finally, failure rate has a significant positive main effect on focal-domain exit ($\beta = 0.119$, $p < .001$, Model 7), indicating that rejection increases the probability of ceasing IT applications altogether. In Model 8, the main effect remains positive and significant ($\beta = 0.118$, $p < .001$), and the interaction between failure rate and female is also positive and significant ($\beta = 0.017$, $p < .001$). At a high rate ofaccumulated failure, women not only redirect effort away from IT but stop applying to IT altogether more readily than men do.
+
+The four outcomes describe the asymmetric consequence profile H2 predicts: failure pushes women's effort out of the male-typed domain (lower IT share, earlier first move outside IT, eventually full cessation of IT applications), without uniformly reducing their job-seeking activity. The leak in male-typed work looks less like a withdrawal from labor than a directed redistribution of labor away from a domain that has become increasingly costly to remain in.
+
+
+\begin{sidewaystable}
+\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Failure Rate and Gendered Career Responses: IT \& Programming (Male-typed Domain)}
+\label{tab:table3}
+\small
+\begin{tabular}{lcccccccc}
+\hline\hline
+  & \multicolumn{2}{c}{Total bids} & \multicolumn{2}{c}{Domain share} & \multicolumn{2}{c}{First outside bid} & \multicolumn{2}{c}{Focal-domain exit} \\
+\cmidrule(lr){2-3}
+\cmidrule(lr){4-5}
+\cmidrule(lr){6-7}
+\cmidrule(lr){8-9}
+  & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+\hline
+Failure rate & $-1.1607^{***}$ & $-1.1676^{***}$ & $-0.1897^{***}$ & $-0.1796^{***}$ & $0.0891^{***}$ & $0.0835^{***}$ & $0.1194^{***}$ & $0.1176^{***}$ \\
+  & $(0.0297)$ & $(0.0290)$ & $(0.0024)$ & $(0.0025)$ & $(0.0017)$ & $(0.0018)$ & $(0.0013)$ & $(0.0014)$ \\[4pt]
+Female $\times$ Failure rate &  & $0.0640$ &  & $-0.0857^{***}$ &  & $0.0612^{***}$ &  & $0.0165^{***}$ \\
+  &  & $(0.1348)$ &  & $(0.0081)$ &  & $(0.0061)$ &  & $(0.0044)$ \\[4pt]
+Cum.\ domain bids & $0.0070^{*}$ & $0.0070^{*}$ & $0.0000$ & $0.0000$ & $0.0032^{***}$ & $0.0032^{***}$ & $0.0001^{***}$ & $0.0001^{***}$ \\
+  & $(0.0033)$ & $(0.0033)$ & $(0.0000)$ & $(0.0000)$ & $(0.0004)$ & $(0.0004)$ & $(0.0000)$ & $(0.0000)$ \\[4pt]
+N applicants (1,000s) & $-0.0259$ & $-0.0259$ & $-0.0074^{***}$ & $-0.0073^{***}$ & $0.0147^{***}$ & $0.0147^{***}$ & $0.0301^{***}$ & $0.0300^{***}$ \\
+  & $(0.0256)$ & $(0.0256)$ & $(0.0018)$ & $(0.0018)$ & $(0.0007)$ & $(0.0007)$ & $(0.0006)$ & $(0.0006)$ \\[4pt]
+N jobs available (1,000s) & $0.9081^{***}$ & $0.9086^{***}$ & $0.0480^{***}$ & $0.0466^{***}$ & $-0.0839^{***}$ & $-0.0837^{***}$ & $-0.2120^{***}$ & $-0.2119^{***}$ \\
+  & $(0.1834)$ & $(0.1833)$ & $(0.0137)$ & $(0.0137)$ & $(0.0053)$ & $(0.0053)$ & $(0.0046)$ & $(0.0046)$ \\[4pt]
+\hline
+Individual FE & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes \\
+$N$ (observations) & 662,505 & 662,505 & 195,363 & 195,363 & 406,919 & 406,919 & 662,505 & 662,505 \\
+$N$ (workers) & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 & 44,161 \\
+$R^2$ (within) & 0.0167 & 0.0167 & 0.0458 & 0.0468 & 0.0261 & 0.0267 & 0.0227 & 0.0227 \\
+\hline\hline
+\multicolumn{9}{p{0.95\textheight}}{
+\footnotesize \textit{Note.} All models include worker fixed effects via within-transformation. Standard errors clustered at the worker level are in parentheses. Odd-numbered columns show the baseline model; even-numbered columns add the Female $\times$ key feedback interaction. Domain: IT \& Programming (male-typed). $\dagger$ $p < .10$, * $p < .05$, ** $p < .01$, *** $p < .001$.
+} \\
+\end{tabular}
+\end{sidewaystable}
+
+
+
+
+
+
+
+\subsection{Counterfactual Case: Writing \& Translation (H3)}
+
+To test H3, we conduct the same regression analyses for a traditionally female-typed job category --- Writing \& Translation where women are well represented (44.9\% of workers) and the cultural template of lower female competence does not apply. This domain provides a counterfactual case for women's reactions to past job-search experiences in female-gender-typical jobs.
+
+Our findings do not uncover a similar gender asymmetry between men and women in Writing \& Translation. The female-by-feedback interactions that drive the IT pattern are either null, opposite in sign, or substantively small on the domain-specific margins; if anything, women anchor more tightly to Writing under both success and failure than men do. These results support H3 and indicate that the asymmetric reallocation we document in IT is not a general property of how women respond to employer feedback, but is conditional on women's position as outsiders in a male-typed domain. For brevity, we do not report the detailed Writing regression results here.
+
+
+
+
+
+
+
+
+% ============================================================
+% DISCUSSION AND CONCLUSIONS
+% ============================================================
+\section{Conclusions}
+
+This paper examines how the two sides of employer feedback, success and failure, jointly shape women's persistence in male-typed work. Using biweekly bidding panels from Freelancer.com, we documented an asymmetric pattern in the male-typed IT domain: accumulated success anchors women to the platform through higher total bidding and a lower probability of ceasing IT applications, yet its anchoring effect on IT bid share and on protection against the first outside bid is muted relative to men. Accumulated failure does not depress women's overall bidding any more than men's, but it sharply pushes women off the IT margin --- a steeper drop in IT bid share, an earlier first move outside IT, and a higher probability of focal-domain exit. In the female-typed Writing domain, this gendered penalty on the domain-allocation margins is absent or reversed, confirming that the this pattern is conditional on women's outsider position in a male-typed field rather than a general feature of how women read employer feedback.
+
+These results suggest that the leaky pipeline in this market is sustained less by women stopping work than by their labor becoming progressively less concentrated in male-typed domains. Consistent with our framework of gendered feedback interpretation, the asymmetry operates on the domain-allocation margin rather than on aggregate participation: success, even when it strengthens women's overall platform engagement more than men's, fails to renew their commitment to the focal male-typed domain --- it is discounted precisely where domain belonging would have to be reasserted. Failure, by contrast, is amplified on those same domain-allocation margins, accelerating women's reallocation out of IT without depressing total bidding any more than men's. Thus, reducing gender inequality in male-typed work thus requires attending not only to what women are told, but to how they are positioned to read it.
+
+
+% ============================================================
+% REFERENCES
+% ============================================================
+\newpage
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
+
+
+
+
+\end{document}

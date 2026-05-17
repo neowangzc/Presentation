@@ -1,0 +1,7 @@
+packages:
+  - 'about-me'
+  - '20260409'
+  - 'demo-training'
+  - 'slidecodex'
+allowBuilds:
+  playwright-chromium: true

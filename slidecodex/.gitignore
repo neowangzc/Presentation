@@ -1,0 +1,17 @@
+node_modules/
+.venv/
+
+dist/
+outputs/
+
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+.DS_Store

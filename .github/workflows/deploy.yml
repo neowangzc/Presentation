@@ -23,10 +23,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies (all workspaces)
+        run: pnpm install --frozen-lockfile
 
       - name: Create Public Directory
         run: mkdir -p public
@@ -34,12 +43,11 @@ jobs:
       # =======================================================
       # Project 1: demo-training
       # =======================================================
-      - name: Install and Build demo-training
+      - name: Build demo-training
         working-directory: demo-training
         run: |
-          npm install
           REPO_NAME=${{ github.event.repository.name }}
-          npx slidev build --out dist --base /${REPO_NAME}/demo-training/
+          pnpm exec slidev build --out dist --base /${REPO_NAME}/demo-training/
 
       - name: Move demo-training to Public
         run: |
@@ -49,13 +57,12 @@ jobs:
       # =======================================================
       # Project 2: 20260409
       # =======================================================
-      - name: Install and Build 20260409
+      - name: Build 20260409
         if: ${{ hashFiles('20260409/package.json') != '' }}
         working-directory: 20260409
         run: |
-          npm install
           REPO_NAME=${{ github.event.repository.name }}
-          npx slidev build --out dist --base /${REPO_NAME}/20260409/
+          pnpm exec slidev build --out dist --base /${REPO_NAME}/20260409/
 
       - name: Move 20260409 to Public
         if: ${{ hashFiles('20260409/package.json') != '' }}
@@ -66,13 +73,12 @@ jobs:
       # =======================================================
       # Project 3: about-me
       # =======================================================
-      - name: Install and Build about-me
+      - name: Build about-me
         if: ${{ hashFiles('about-me/package.json') != '' }}
         working-directory: about-me
         run: |
-          npm install
           REPO_NAME=${{ github.event.repository.name }}
-          npx slidev build --out dist --base /${REPO_NAME}/about-me/
+          pnpm exec slidev build --out dist --base /${REPO_NAME}/about-me/
 
       - name: Move about-me to Public
         if: ${{ hashFiles('about-me/package.json') != '' }}
@@ -81,19 +87,34 @@ jobs:
           cp -r about-me/dist/* public/about-me/
 
       # =======================================================
-      # Project 4: talk-2026-02 (template — uncomment to use)
+      # Project 4: slidecodex
       # =======================================================
-      # - name: Install and Build talk-2026-02
-      #   working-directory: talk-2026-02
-      #   run: |
-      #     npm install
-      #     REPO_NAME=${{ github.event.repository.name }}
-      #     npx slidev build --out dist --base /${REPO_NAME}/talk-2026-02/
+      - name: Build slidecodex
+        if: ${{ hashFiles('slidecodex/package.json') != '' }}
+        working-directory: slidecodex
+        run: |
+          REPO_NAME=${{ github.event.repository.name }}
+          pnpm exec slidev build --out dist --base /${REPO_NAME}/slidecodex/
 
-      # - name: Move talk-2026-02 to Public
+      - name: Move slidecodex to Public
+        if: ${{ hashFiles('slidecodex/package.json') != '' }}
+        run: |
+          mkdir -p public/slidecodex
+          cp -r slidecodex/dist/* public/slidecodex/
+
+      # =======================================================
+      # Project 5: talk-2026-XX (template — uncomment to use)
+      # =======================================================
+      # - name: Build talk-2026-XX
+      #   working-directory: talk-2026-XX
       #   run: |
-      #     mkdir -p public/talk-2026-02
-      #     cp -r talk-2026-02/dist/* public/talk-2026-02/
+      #     REPO_NAME=${{ github.event.repository.name }}
+      #     pnpm exec slidev build --out dist --base /${REPO_NAME}/talk-2026-XX/
+
+      # - name: Move talk-2026-XX to Public
+      #   run: |
+      #     mkdir -p public/talk-2026-XX
+      #     cp -r talk-2026-XX/dist/* public/talk-2026-XX/
 
       # =======================================================
       # Generate Landing Page
