@@ -338,10 +338,8 @@ h1, h2, h3, p {
 .theory-bullet {
   min-height: 104px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 104px 1fr;
+  display: flex;
   align-items: center;
-  gap: 26px;
   padding: 16px 30px;
   background: rgba(255,255,255,0.3);
   border-left: 5px solid var(--teal);
@@ -365,10 +363,10 @@ h1, h2, h3, p {
 
 .theory-bullet p {
   margin-top: 8px;
-  color: var(--muted);
+  color: #000;
   font-size: 21px;
   line-height: 1.32;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .theory-bridge {
@@ -1056,16 +1054,23 @@ h1, h2, h3, p {
   right: 58px;
   top: 172px;
   bottom: 104px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 64px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+}
+
+.closing > :first-child {
+  align-self: end;
+  padding-bottom: 28px;
+}
+
+.closing > :last-child {
+  align-self: center;
+  padding-top: 40px;
 }
 
 .quote {
   max-width: 1120px;
-  padding-top: 24px;
-  border-top: 2px solid var(--ink);
   font-family: "Songti SC", "STSong", "PingFang SC", serif;
   font-size: 34px;
   line-height: 1.16;
@@ -1075,18 +1080,18 @@ h1, h2, h3, p {
 .questions {
   max-width: 1040px;
   border-left: 4px solid var(--clay);
-  padding-left: 26px;
+  padding-left: 32px;
   display: grid;
-  gap: 12px;
+  gap: 22px;
 }
 
-.questions p {
+.questions > div {
   color: #111827;
-  font-size: 20px;
-  line-height: 1.34;
+  font-size: 26px;
+  line-height: 1.42;
 }
 
-.questions p b {
+.questions > div b {
   color: #111827;
 }
 
@@ -1152,7 +1157,7 @@ h1, h2, h3, p {
   max-width: 710px;
 }
 
-.pipeline-bullets p {
+.pipeline-bullets > div {
   position: relative;
   padding-left: 34px;
   color: var(--ink);
@@ -1161,7 +1166,7 @@ h1, h2, h3, p {
   font-weight: 800;
 }
 
-.pipeline-bullets p::before {
+.pipeline-bullets > div::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1171,11 +1176,11 @@ h1, h2, h3, p {
   background: var(--teal);
 }
 
-.pipeline-bullets p:nth-child(2)::before {
+.pipeline-bullets > div:nth-child(2)::before {
   background: #ef4444;
 }
 
-.pipeline-bullets p:nth-child(3)::before {
+.pipeline-bullets > div:nth-child(3)::before {
   background: #16a34a;
 }
 
@@ -2480,7 +2485,7 @@ h1, h2, h3, p {
 
 .slidev-layout .page > p,
 .slidev-layout .page .support,
-.slidev-layout .page .pipeline-bullets p,
+.slidev-layout .page .pipeline-bullets > div,
 .slidev-layout .page .feedback-event b,
 .slidev-layout .page .feedback-event p,
 .slidev-layout .page .feedback-signal-line b,
@@ -2494,7 +2499,6 @@ h1, h2, h3, p {
 .slidev-layout .page .data-overview-copy,
 .slidev-layout .page .panel-window-note,
 .slidev-layout .page .quote,
-.slidev-layout .page .questions p {
+.slidev-layout .page .questions > div {
   font-family: var(--slide-body-font) !important;
-  font-size: var(--slide-body-size) !important;
 }

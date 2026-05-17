@@ -5,10 +5,11 @@ info: 16-slide academic Slidev deck generated from draft.tex
 drawings:
   persist: false
 fonts:
-  sans: 'Noto Sans SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  sans: 'Inter, Noto Sans SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
   serif: 'Noto Serif SC, serif'
   mono: 'Roboto Mono, monospace'
   provider: google
+  weights: '300,400,500,600,700,800'
 aspectRatio: 16/9
 canvasWidth: 1280
 transition: slide-left
@@ -51,9 +52,9 @@ mermaid:
   <h2 class="claim wide">The Leaky Pipeline</h2>
   <div class="vertical-pipeline-layout">
     <div class="pipeline-bullets">
-      <p>Female entry into male-typed works(eg. IT) rises</p>
-      <p>Female more likely than men to leave male-typed works</p>
-      <p>Occupational segregation persists</p>
+      <div v-click="1">Female entry into male-typed works(eg. IT) rises</div>
+      <div v-click="2">Female more likely than men to leave male-typed works</div>
+      <div v-click="3">Occupational segregation persists</div>
     </div>
     <img class="leaky-pipeline-image" src="./leaky.png" alt="Leaky pipeline diagram" />
   </div>
@@ -71,17 +72,17 @@ mermaid:
 <p>Approval or rejection influences where workers apply next.</p>
     </div>
     <div class="feedback-signal-stack">
-      <div class="feedback-signal-line">
+      <div class="feedback-signal-line" v-click="1">
         <span>01</span>
         <div><b>Ability</b><p>Can I do this job?</p></div>
       </div>
-      <div class="feedback-signal-line">
+      <div class="feedback-signal-line" v-click="2">
         <span>02</span>
         <div><b>Belonging</b><p>Do I belong in this work?</p></div>
       </div>
     </div>
   </div>
-  <div class="feedback-bottom-line">The meaning of success and failure may differ by gender in male-typed work.</div>
+  <div class="feedback-bottom-line" v-click="3">The meaning of success and failure may differ by gender in male-typed work.</div>
   <div class="footer"><span></span><span>03</span></div>
 </div>
 
@@ -231,11 +232,11 @@ mermaid:
   <div class="kicker">Research Question</div>
   <h2 class="claim wide">Research Question</h2>
   <div class="research-questions">
-    <div class="rq-card">
+    <div class="rq-card" v-click="1">
       <div class="rq-label">Q1</div>
       <p>Do men and women respond to feedback differently?</p>
     </div>
-    <div class="rq-card">
+    <div class="rq-card" v-click="2">
       <div class="rq-label">Q2</div>
       <p>Does the response depend on the work type?</p>
     </div>
@@ -249,22 +250,19 @@ mermaid:
   <div class="kicker">THEORY</div>
   <h2 class="claim wide">Female Workers in Male-Typed Work</h2>
   <div class="theory-three-bullets">
-    <div class="theory-bullet">
-      <span class="bullet-num">01</span>
+    <div class="theory-bullet" v-click="1">
       <div>
         <b>Bias awareness</b>
         <p>Women know employers tend to undervalue them in male-typed works.</p>
       </div>
     </div>
-    <div class="theory-bullet">
-      <span class="bullet-num">02</span>
+    <div class="theory-bullet" v-click="2">
       <div>
         <b>Lower self-assessment</b>
         <p>Cultural beliefs tie technical competence more strongly to men than women.</p>
       </div>
     </div>
-    <div class="theory-bullet">
-      <span class="bullet-num">03</span>
+    <div class="theory-bullet" v-click="3">
       <div>
         <b>Token position</b>
         <p>As minorities in male-typed works, each success reads as exception, not evidence of fit.</p>
@@ -280,9 +278,9 @@ mermaid:
   <div class="kicker">Hypotheses</div>
   <h2 class="claim">In male-typed work, feedback acts asymmetrically.</h2>
   <div class="hypotheses">
-    <div class="hypo"><div class="tag">H1</div><div class="text">Discounted Success:<br>Wins anchor women to IT less than they anchor men.</div><div class="expect"></div></div>
-    <div class="hypo"><div class="tag">H2</div><div class="text">Amplified Failure:<br>Losses push women out of IT faster than they push men.</div><div class="expect"></div></div>
-    <div class="hypo"><div class="tag">H3</div><div class="text">The feedback asymmetry appears only where women are underrepresented.</div><div class="expect"></div></div>
+    <div class="hypo" v-click="1"><div class="tag">H1</div><div class="text">Discounted Success:<br>Wins anchor women to IT less than they anchor men.</div><div class="expect"></div></div>
+    <div class="hypo" v-click="2"><div class="tag">H2</div><div class="text">Amplified Failure:<br>Losses push women out of IT faster than they push men.</div><div class="expect"></div></div>
+    <div class="hypo" v-click="3"><div class="tag">H3</div><div class="text">The feedback asymmetry appears only where women are underrepresented.</div><div class="expect"></div></div>
   </div>
   <div class="footer"><span></span><span>08</span></div>
 </div>
@@ -299,15 +297,15 @@ mermaid:
     <div class="setting-metric"><b>3.16M</b><span>bids</span></div>
   </div>
   <div class="setting-domain-grid">
-    <div class="setting-domain-card">
+    <div class="setting-domain-card" v-click="1">
       <div class="domain-role">Male-typed work</div>
       <h3>IT &amp; Programming</h3>
-      <div class="female-share"><b>11.7%</b><span>female</span></div>
+      <div class="female-share"><b style="color:#2563eb; font-size:60px;">11.7%</b><span>female</span></div>
     </div>
-    <div class="setting-domain-card">
+    <div class="setting-domain-card" v-click="2">
       <div class="domain-role">Female-typed work</div>
       <h3>Writing &amp; Translation</h3>
-      <div class="female-share"><b>44.9%</b><span>female</span></div>
+      <div class="female-share"><b style="color:#dc2626; font-size:60px;">44.9%</b><span>female</span></div>
     </div>
   </div>
   <div class="footer"><span class="panel-footnote">[1] Most freelancers leave the platform within 1.7 years, average work activity lasts about 28 weeks.</span><span>09</span></div>
@@ -506,11 +504,11 @@ mermaid:
   <div class="kicker">Contribution And Discussion</div>
   <h2 class="claim wide">Contribution and Discussion</h2>
   <div class="closing">
-    <div class="questions">
-      <p><b>Theoretical contribution:</b> shifts attention from entry barriers to the leak pipeline.</p>
-      <p><b>Empirical contribution:</b> shows that gendered interpretation of feedback is asymmetric in OLMs.</p>
+    <div class="questions" v-click="1">
+      <div><b>Theoretical contribution:</b> shifts attention from entry barriers to the leak pipeline.</div>
+      <div><b>Empirical contribution:</b> shows that gendered interpretation of feedback is asymmetric in OLMs.</div>
     </div>
-    <div>
+    <div v-click="2">
       <div class="quote">Addressing occupational segregation calls for attention not only to entry opportunities, but also to the conditions that sustain women's presence and support their advancement.</div>
     </div>
   </div>
