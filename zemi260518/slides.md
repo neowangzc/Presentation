@@ -45,6 +45,12 @@ mermaid:
   </div>
 </div>
 
+<!--
+Good afternoon, everyone. I am Zhichao Wang, a doctoral student at Tohoku University.
+
+The title of today's presentation is "Winning Doesn't Fix the Leak: Gendered Interpretation of Feedback in Online Labor Markets."
+-->
+
 ---
 
 <div class="page">
@@ -60,6 +66,16 @@ mermaid:
   </div>
   <div class="footer"><span></span><span>02</span></div>
 </div>
+
+<!--
+Over the past two decades, we've seen substantial progress in women's entry into traditionally male-typed fields such as software, data science, and engineering. But entry is only part of the story.
+
+A growing body of research shows that women are also more likely than men to leave these fields after entering them. So even as more women flow into these occupations, women remain underrepresented overall.
+
+This is the phenomenon often described as the "leaky pipeline." Women enter the pipeline, but are gradually lost at every stage over time. As we move toward senior positions or long-term career trajectories, very few women remain.
+
+Most prior work focuses on entry and exit. But the process in between — what actually happens inside the pipeline — remains largely unexplored. That's the gap we want to address.
+-->
 
 ---
 
@@ -85,6 +101,16 @@ mermaid:
   <div class="feedback-bottom-line" v-click="3">The meaning of success and failure may differ by gender in male-typed work.</div>
   <div class="footer"><span></span><span>03</span></div>
 </div>
+
+<!--
+There are many possible mechanisms behind this process. In this study, we focus on one in particular: how success and failure signals from employers may shape workers' commitment to male-typed fields.
+
+As we know, prior outcomes shape what we do next. When you apply for a job and you get accepted, or you get rejected, that experience is not just an outcome — it carries information.
+
+These signals tell us two things: "Can I actually do this job?" and "Do I belong in this kind of work?" Together, they shape where you apply next.
+
+We argue that the meaning of success and failure may differ by gender in male-typed work. A man and a woman who receive the same rejection from an IT project are not hearing the same thing. The man hears: "I lost this one." The woman may hear: "This is not a place for me." The same feedback, two different interpretations. That is the mechanism we want to test.
+-->
 
 ---
 
@@ -208,41 +234,58 @@ mermaid:
   <div class="footer"><span></span><span>04</span></div>
 </div>
 
----
+<!--
+Online labor markets give us a suitable setting for our research. These are digital platforms that connect employers with remote workers to complete short-term projects over the internet. Let me briefly introduce how this market works.
 
-<div class="page">
-  <div class="kicker">INTRODUCTION</div>
-  <h2 class="claim wide">Online labor markets make the leakage observable.</h2>
-  <div class="need-provide-table">
-    <div class="need-provide-head">What we need to observe</div>
-    <div class="need-provide-head">What OLMs provide</div>
-    <div class="need-provide-cell">Cumulative win/loss</div>
-    <div class="need-provide-cell">High-frequency bidding</div>
-    <div class="need-provide-cell">Shifts across works</div>
-    <div class="need-provide-cell">12 categories free movement</div>
-    <div class="need-provide-cell">Long-run effects</div>
-    <div class="need-provide-cell">Full platform trajectory</div>
-  </div>
-  <div class="footer"><span></span><span>05</span></div>
-</div>
+First, an employer posts a project. In this example, the employer is looking for someone to build a personal academic homepage. They specify a budget, choose a project category — here, IT and Software — and list the required skills.
+
+Next, freelancers from around the world submit bids. Each bid includes a proposed price, delivery time, and a short self-introduction or pitch. In this example, we see two male workers and one female worker bidding for the same project.
+
+Finally, the employer selects one worker from the pool of bidders. The selected worker wins the contract, while the others are rejected. Importantly, every bidder observes the outcome — whether they won or lost. So each bid generates a feedback signal for workers.
+
+On the platform, workers bid for projects constantly, and every bid produces a visible outcome. We can observe the full history for each worker across their entire trajectory on the platform.
+-->
 
 ---
 
 <div class="page">
-  <div class="kicker">Research Question</div>
-  <h2 class="claim wide">Research Question</h2>
-  <div class="research-questions">
-    <div class="rq-card" v-click="1">
-      <div class="rq-label">Q1</div>
-      <p>Do men and women respond to feedback differently?</p>
+  <div class="kicker">Motivation</div>
+  <h2 class="claim wide">Research Gap.</h2>
+  <div class="gap-rq-grid">
+    <div class="gap-col" v-click="1">
+      <div class="gap-card">
+        <div class="gap-eyebrow">Gap 1</div>
+        <p>Asked only whether rejected workers <b>reapply to the same employer</b> 
+        </p>
+      </div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-q">
+        <div class="q-label">Q1</div>
+        <p>Do men and women differ in how feedback shapes whether they stay in or reallocate away from the male-typed domain?</p>
+      </div>
     </div>
-    <div class="rq-card" v-click="2">
-      <div class="rq-label">Q2</div>
-      <p>Does the response depend on the work type?</p>
+    <div class="gap-col" v-click="2">
+      <div class="gap-card">
+        <div class="gap-eyebrow">Gap 2</div>
+        <p>Treated job domains as uniform — ignoring that domains are <b>gender-typed differently</b></p>
+      </div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-q">
+        <div class="q-label">Q2</div>
+        <p>Does this response depend on the work type — the domain's gender-typing?</p>
+      </div>
     </div>
   </div>
-  <div class="footer"><span></span><span>06</span></div>
+  <div class="footer"><span class="panel-footnote"></span><span>05</span></div>
 </div>
+
+<!--
+So where does prior work leave us — and what exactly are we asking?
+
+Research on how people respond to rejection has looked mostly at one narrow decision: whether a rejected worker goes back and reapplies to the same employer. That's useful, but it misses the bigger movement. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, the male-typed domain?
+
+Second, most of this work has treated job domains as if they were interchangeable. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
+-->
 
 ---
 
@@ -269,8 +312,18 @@ mermaid:
       </div>
     </div>
   </div>
-  <div class="footer"><span></span><span>07</span></div>
+  <div class="footer"><span></span><span>06</span></div>
 </div>
+
+<!--
+Based on these two questions, we reviewed the research on women in male-typed work, and found three things.
+
+[click 1] Bias awareness. Women in male-typed work know employers tend to undervalue them. Every rejection is read against that background.
+
+[click 2] Lower self-assessment. Cultural beliefs tie technical competence more strongly to men. Women walk in with a lower prior on themselves.
+
+[click 3] Token position. As women are a minority in male-typed work, each success is read as an exception — not as evidence they belong.
+-->
 
 ---
 
@@ -282,8 +335,18 @@ mermaid:
     <div class="hypo" v-click="2"><div class="tag">H2</div><div class="text">Amplified Failure:<br>Losses push women out of IT faster than they push men.</div><div class="expect"></div></div>
     <div class="hypo" v-click="3"><div class="tag">H3</div><div class="text">The feedback asymmetry appears only where women are underrepresented.</div><div class="expect"></div></div>
   </div>
-  <div class="footer"><span></span><span>08</span></div>
+  <div class="footer"><span></span><span>07</span></div>
 </div>
+
+<!--
+Thus, we propose three hypotheses.
+
+[click 1] H1 — Discounted Success. In male-typed work, wins anchor women less than they anchor men. Even when a woman wins a male-typed project, that win does not pull her further into the field.
+
+[click 2] H2 — Amplified Failure. Losses push women out of male-typed work faster than they push men.
+
+[click 3] H3 — Domain Specificity. This feedback asymmetry should appear only where women are underrepresented — that is, only in male-typed work.
+-->
 
 ---
 
@@ -308,8 +371,14 @@ mermaid:
       <div class="female-share"><b style="color:#dc2626; font-size:60px;">44.9%</b><span>female</span></div>
     </div>
   </div>
-  <div class="footer"><span class="panel-footnote">[1] Most freelancers leave the platform within 1.7 years, average work activity lasts about 28 weeks.</span><span>09</span></div>
+  <div class="footer"><span class="panel-footnote">[1] Most freelancers leave the platform within 1.7 years, average work activity lasts about 28 weeks.</span><span>08</span></div>
 </div>
+
+<!--
+We collected data from Freelancer.com, one of the largest online labor markets in the world. For each worker, we track the first two years of their platform career.
+
+We focus on workers whose platform career began in one of the two most representative domains. IT and Programming is our male-typed domain — its female share is the lowest on the platform, at 11.7%. Writing and Translation is our female-typed counterpart, where the female share is nearly balanced, at 44.9%.
+-->
 
 ---
 
@@ -358,10 +427,18 @@ mermaid:
     </svg>
     <div class="panel-window-note">We partition each worker’s bidding history into consecutive biweekly windows<sup>1</sup> to construct a panel dataset.</div>
   </div>
-  <div class="footer"><span class="panel-footnote">[1] We use biweekly windows because they are long enough to capture a typical posting-and-feedback cycle in Freelancer.com.</span><span>10</span></div>
+  <div class="footer"><span class="panel-footnote">[1] We use biweekly windows because they are long enough to capture a typical posting-and-feedback cycle in Freelancer.com.</span><span>09</span></div>
 </div>
 
+<!--
+We partition each worker's bidding history into biweekly windows.
 
+[click 1] For each window, we measure the feedback the worker has accumulated up to that point. Specifically: cumulative wins in logs — how many prior bids were accepted; failure rate — the share of all prior bids that were rejected; and both of these interacted with a female indicator, which is what lets us test gender differences.
+
+[click 2] These cumulative feedback measures are then used to predict —
+
+[click 3] — outcomes in the next window. We look at four outcomes: overall bidding activity — how active the worker is; the share of bids placed in IT — how concentrated their effort is in the starting domain; first outside bid — when, for the first time, the worker places a bid outside their starting domain; and domain exit — whether the worker stops bidding in IT altogether.
+-->
 
 ---
 
@@ -409,8 +486,16 @@ mermaid:
       <p>slightly stronger for women</p>
     </div>
   </div>
-  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>11</span></div>
+  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>10</span></div>
 </div>
+
+<!--
+We regressed each of the four outcomes on cumulative wins and its interaction with the female indicator.
+
+Wins engage women on the platform overall — they bid more, they stay longer. But on the domain-allocation outcomes, wins don't anchor women into IT the way they anchor men, and they don't slow women's move out of IT.
+
+The overall pattern is consistent with H1: women's wins translate into general activity, but the anchoring effect of success is weaker for women than for men.
+-->
 
 ---
 
@@ -458,8 +543,16 @@ mermaid:
       <p>women are more likely to exit</p>
     </div>
   </div>
-  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>12</span></div>
+  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>11</span></div>
 </div>
+
+<!--
+Similarly, on the failure side: we find failure reduces activity for everyone equally.
+
+But on the domain-allocation outcomes, failure pushes women out of IT faster than men — they move outside sooner, their IT share drops more steeply, and they exit IT more readily.
+
+That is consistent with H2: failure has a stronger effect on leaving IT for women than for men.
+-->
 
 ---
 
@@ -493,10 +586,16 @@ mermaid:
     <div class="domain-coef nonsig">+0.006 n.s.</div>
   </div>
   <div class="domain-takeaway">The Writing comparison does not show the same female penalty observed in IT. Instead, the interactions are either statistically null or run in the opposite direction</div>
-  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>13</span></div>
+  <div class="footer"><span class="panel-footnote">Note: + P &lt; .10, * P &lt; .05, ** P &lt; .01, *** P &lt; .001. All models include individual fixed effects; standard errors in parentheses are clustered at the individual level.</span><span>12</span></div>
 </div>
 
+<!--
+Finally, we tested whether this gender difference in feedback response is something that shows up everywhere, or is concentrated in male-typed work.
 
+We rerun the same models on Writing and Translation, and we found that the penalty on women we saw in IT doesn't appear in Writing.
+
+It appears only where women are underrepresented — that is, only in male-typed work, not in female-typed work. This supports H3.
+-->
 
 ---
 
@@ -512,5 +611,31 @@ mermaid:
       <div class="quote">Addressing occupational segregation calls for attention not only to entry opportunities, but also to the conditions that sustain women's presence and support their advancement.</div>
     </div>
   </div>
-  <div class="footer"><span>Closing slide</span><span>15</span></div>
+  <div class="footer"><span>Closing slide</span><span>13</span></div>
 </div>
+
+<!--
+In this study, we shift attention away from the entry barrier toward the leak inside the pipeline. And we show that gendered interpretation of feedback in online labor markets is asymmetric — women's wins are discounted, losses are amplified — and this asymmetry appears only where women are underrepresented.
+
+Getting more women into male-typed work is necessary, but not sufficient. We also have to make sure that, once they are there, every win counts, and every loss is just a loss — not a judgment on whether they belong.
+-->
+
+---
+
+<div class="page" style="height:720px;">
+  <div class="kicker">Thank You</div>
+  <div style="position:absolute; left:58px; right:58px; top:248px;">
+    <h1 class="claim wide" style="font-size:56px; line-height:1.08; max-width:1080px; margin-top:0; color:#000000;">Thank you!</h1>
+    <p style="font-size:26px; max-width:980px; margin-top:28px; color:#111827; font-weight:700; line-height:1.35;">Questions and comments are very welcome.</p>
+  </div>
+  <div style="position:absolute; left:58px; right:58px; bottom:58px; color:#374151; font-size:22px; line-height:1.35; font-weight:700;">
+    Wang Zhichao, Lyu Zeyu<br>
+    <span style="font-size:20px; font-weight:600;">Graduate School of Letters, Tohoku University</span>
+  </div>
+  <div class="footer"><span>Thank you</span><span>14</span></div>
+</div>
+
+<!--
+Thank you for listening. I'd be very happy to take your questions.
+-->
+
