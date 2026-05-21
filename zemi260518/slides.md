@@ -47,7 +47,7 @@ mermaid:
 </div>
 
 <!--
-Good afternoon, everyone. I am Zhichao Wang, a doctoral student at Tohoku University.
+Good afternoon, everyone. I am Zhichao Wang, a sceond year doctoral student at Tohoku University.
 
 The title of today's presentation is "Winning Doesn't Fix the Leak: Gendered Interpretation of Feedback in Online Labor Markets."
 -->
