@@ -283,9 +283,9 @@ On the platform, workers bid for projects constantly, and every bid produces a v
 
 <!--
 
-Prior research mainly focus on how a rejected worker reapplies to the same employer. That's useful, but it misses the job domains. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, a specific domain?
+Prior research mainly focuses on how a rejected worker reapplies to the same employer. That's useful, but it misses the bigger movement. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, the male-typed domain?
 
-Second, most of this work has treated job domains as if they were uniform. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
+Second, most of this work has treated job domains as if they were interchangeable. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
 -->
 
 ---
