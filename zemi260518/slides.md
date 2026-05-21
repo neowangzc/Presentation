@@ -240,10 +240,10 @@ Online labor markets give us a suitable setting for our research. These are digi
 
 First, an employer posts a project on platform. In this example, the employer is looking for someone to build a personal homepage. They specify a budget, choose a project category — here, IT and Software — and list the required skills.
 
-Next, freelancers from around the world submit bids. Each bid includes a proposed price, delivery time, and a short self-introduction or pitch. Through a freelancer's profile, the employer can also get basic information about the worker, such as their name, gender, or race.
+Next, freelancers from around the world submit bids. Each bid includes a proposed price, delivery time, and a short self-introduction. Through a freelancer's profile, we can get basic information about the worker, such as their name, gender, or race.
 In this example, we see two male workers and one female worker bidding for the same project.
 
-Finally, the employer selects one worker from the pool of bidders. The selected worker wins the contract, while the others are rejected. Importantly, every bidder observes the outcome — whether they won or lost. So each bid generates a feedback signal for workers.
+Finally, the employer selects one worker from the pool of bidders. The selected worker wins the contract, while the others are rejected. Every bidder can observe this outcome,so each bid generates a feedback signal for workers.
 
 On the platform, workers bid for projects constantly, and every bid produces a visible outcome. We can observe the full history for each worker across their entire trajectory on the platform.
 -->
@@ -263,7 +263,7 @@ On the platform, workers bid for projects constantly, and every bid produces a v
       <div class="gap-arrow">→</div>
       <div class="gap-q">
         <div class="q-label">Q1</div>
-        <p>Do men and women differ in how feedback shapes whether they stay in or reallocate away from the male-typed domain?</p>
+        <p>Do men and women differ in how feedback shapes whether they stay in or reallocate away from a specific domain?</p>
       </div>
     </div>
     <div class="gap-col" v-click="2">
@@ -283,9 +283,9 @@ On the platform, workers bid for projects constantly, and every bid produces a v
 
 <!--
 
-Prior research on how people respond to rejection has looked mostly at one narrow decision: whether a rejected worker goes back and reapplies to the same employer. That's useful, but it misses the bigger movement. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, the male-typed domain?
+Prior research mainly focus on how a rejected worker reapplies to the same employer. That's useful, but it misses the job domains. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, a specific domain?
 
-Second, most of this work has treated job domains as if they were interchangeable. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
+Second, most of this work has treated job domains as if they were uniform. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
 -->
 
 ---
@@ -317,7 +317,7 @@ Second, most of this work has treated job domains as if they were interchangeabl
 </div>
 
 <!--
-Based on these two questions, we reviewed the research on women in male-typed work, and found three things.
+Based on these two questions, we reviewed the research on women in male-typed work, and found some mechanisms.
 
 Women in male-typed work know employers tend to undervalue them. Every rejection is read against that background.
 
@@ -342,11 +342,11 @@ As women are a minority in male-typed work, each success is read as an exception
 <!--
 Thus, we propose three hypotheses.
 
-[click 1] H1 — Discounted Success. In male-typed work, wins anchor women less than they anchor men. Even when a woman wins a male-typed project, that win does not pull her further into the field.
+H1 — Discounted Success. In male-typed work, wins anchor women less than they anchor men. Even when a woman wins a male-typed project, that win does not pull her further into the field.
 
-[click 2] H2 — Amplified Failure. Losses push women out of male-typed work faster than they push men.
+H2 — Amplified Failure. Losses push women out of male-typed work faster than they push men.
 
-[click 3] H3 — Domain Specificity. This feedback asymmetry should appear only where women are underrepresented — that is, only in male-typed work.
+H3 — Domain Specificity. This feedback asymmetry should appear only where women are underrepresented — that is, only in male-typed work.
 -->
 
 ---
@@ -434,9 +434,9 @@ We focus on workers whose platform career began in one of the two most represent
 <!--
 We partition each worker's bidding history into biweekly windows.
 
-For each window, we measure the feedback the worker has accumulated up to that point. Specifically: cumulative wins in logs — how many prior bids were accepted; failure rate — the share of all prior bids that were rejected; and both of these interacted with a female indicator, which is what lets us test gender differences.
+For each window, we measure the feedback the worker has accumulated up to that point. Specifically: cumulative wins — how many prior bids were accepted; failure rate — the share of prior rejected bids; and both of these interacted with a female indicator, which is what lets us test gender differences.
 
-These cumulative feedback measures are then used to predict outcomes in the next window. We look at four outcomes: overall bidding activity — how active the worker is; the share of bids placed in IT — how concentrated their effort is in the starting domain; first outside bid — when, for the first time, the worker places a bid outside their starting domain; and domain exit — whether the worker stops bidding in IT altogether.
+These cumulative feedback measures are then used to predict outcomes in the next window. We look at four outcomes: how active the worker is;  how concentrated their effort is in the starting domain; when, for the first time, the worker places a bid outside their starting domain; and  whether the worker stops bidding in IT altogether.
 -->
 
 ---
@@ -491,7 +491,8 @@ These cumulative feedback measures are then used to predict outcomes in the next
 <!--
 We regressed each of the four outcomes on cumulative wins and its interaction with the female indicator.
 
-Wins engage women on the platform overall — they bid more, they stay longer. But on the domain-allocation outcomes, wins don't anchor women into IT the way they anchor men, and they don't slow women's move out of IT.
+We found that
+Wins engage women on the platform overall — they bid more, they stay longer. But on the domain outcomes, wins don't anchor women into IT the way they anchor men, and they don't slow women's move out of IT.
 
 The overall pattern is consistent with H1: women's wins translate into general activity, but the anchoring effect of success is weaker for women than for men.
 -->
@@ -548,7 +549,7 @@ The overall pattern is consistent with H1: women's wins translate into general a
 <!--
 Similarly, on the failure side: we find failure reduces activity for everyone equally.
 
-But on the domain-allocation outcomes, failure pushes women out of IT faster than men — they move outside sooner, their IT share drops more steeply, and they exit IT more readily.
+But on the domain outcomes, failure pushes women out of IT faster than men — they move outside sooner, their IT share drops more steeply, and they exit IT more readily.
 
 That is consistent with H2: failure has a stronger effect on leaving IT for women than for men.
 -->
@@ -589,11 +590,11 @@ That is consistent with H2: failure has a stronger effect on leaving IT for wome
 </div>
 
 <!--
-Finally, we tested whether this gender difference in feedback response is something that shows up everywhere, or is concentrated in male-typed work.
+Finally, we tested whether this gender difference in feedback response is something that shows up everywhere, or is concentrated in gender-specific work.
 
 We rerun the same models on Writing and Translation, and we found that the penalty on women we saw in IT doesn't appear in Writing.
 
-It appears only where women are underrepresented — that is, only in male-typed work, not in female-typed work. This supports H3.
+It appears only where women are underrepresented — that is, only in male-typed work. This supports H3.
 -->
 
 ---
