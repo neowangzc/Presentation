@@ -33,6 +33,7 @@ mermaid:
 <style src="./style.css"></style>
 
 <div class="page" style="height:720px;">
+  <img src="./tohokuuniversitylogo.png" alt="Tohoku University" style="position:absolute; top:44px; right:58px; height:104px; width:auto;" />
   <div class="kicker">Session: Work and Employment | PAS 2026 Annual Conference</div>
   <div style="position:absolute; left:58px; right:58px; top:228px;">
     <h1 class="claim wide" style="font-size:48px; line-height:1.08; max-width:1080px; margin-top:0; color:#000000;">Winning Doesn’t Fix the Leak</h1>
@@ -72,9 +73,9 @@ Over the past two decades, we've seen substantial progress in women's entry into
 
 A growing body of research shows that women are also more likely than men to leave these fields after entering them. So even as more women flow into these occupations, women remain underrepresented overall.
 
-This is the phenomenon often described as the "leaky pipeline." Women enter the pipeline, but are gradually lost at every stage over time. As we move toward senior positions or long-term career trajectories, very few women remain.
+This is the phenomenon often described as the "leaky pipeline." Women enter a male-typed domain, but are gradually lost at every stage over time. As we move toward senior positions or long-term career trajectories, very few women remain.
 
-Most prior work focuses on entry and exit. But the process in between — what actually happens inside the pipeline — remains largely unexplored. That's the gap we want to address.
+Most prior work focuses on entry and exit. But the process in between — what actually happens inside this leaky pipeline — remains largely unexplored. That's the gap we want to address.
 -->
 
 ---
@@ -103,9 +104,9 @@ Most prior work focuses on entry and exit. But the process in between — what a
 </div>
 
 <!--
-There are many possible mechanisms behind this process. In this study, we focus on one in particular: how success and failure signals from employers may shape workers' commitment to male-typed fields.
+There are many possible mechanisms behind this process. In this study, we focus on one in particular: success and failure signals from employers may shape workers' commitment to specific fields by gender.
 
-As we know, prior outcomes shape what we do next. When you apply for a job and you get accepted, or you get rejected, that experience is not just an outcome — it carries information.
+As we know, prior outcomes guide what we do next. When you apply for a job and you get accepted, or you get rejected, that experience is not just an outcome — it carries information.
 
 These signals tell us two things: "Can I actually do this job?" and "Do I belong in this kind of work?" Together, they shape where you apply next.
 
@@ -237,9 +238,10 @@ We argue that the meaning of success and failure may differ by gender in male-ty
 <!--
 Online labor markets give us a suitable setting for our research. These are digital platforms that connect employers with remote workers to complete short-term projects over the internet. Let me briefly introduce how this market works.
 
-First, an employer posts a project. In this example, the employer is looking for someone to build a personal academic homepage. They specify a budget, choose a project category — here, IT and Software — and list the required skills.
+First, an employer posts a project on platform. In this example, the employer is looking for someone to build a personal homepage. They specify a budget, choose a project category — here, IT and Software — and list the required skills.
 
-Next, freelancers from around the world submit bids. Each bid includes a proposed price, delivery time, and a short self-introduction or pitch. In this example, we see two male workers and one female worker bidding for the same project.
+Next, freelancers from around the world submit bids. Each bid includes a proposed price, delivery time, and a short self-introduction or pitch. Through a freelancer's profile, the employer can also get basic information about the worker, such as their name, gender, or race.
+In this example, we see two male workers and one female worker bidding for the same project.
 
 Finally, the employer selects one worker from the pool of bidders. The selected worker wins the contract, while the others are rejected. Importantly, every bidder observes the outcome — whether they won or lost. So each bid generates a feedback signal for workers.
 
@@ -280,9 +282,8 @@ On the platform, workers bid for projects constantly, and every bid produces a v
 </div>
 
 <!--
-So where does prior work leave us — and what exactly are we asking?
 
-Research on how people respond to rejection has looked mostly at one narrow decision: whether a rejected worker goes back and reapplies to the same employer. That's useful, but it misses the bigger movement. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, the male-typed domain?
+Prior research on how people respond to rejection has looked mostly at one narrow decision: whether a rejected worker goes back and reapplies to the same employer. That's useful, but it misses the bigger movement. So our first question is: do men and women differ in how feedback shapes whether they stay in, or move away from, the male-typed domain?
 
 Second, most of this work has treated job domains as if they were interchangeable. But domains are gender-typed — some coded male, some female — and the same feedback may mean very different things depending on where you stand. That's our second question.
 -->
@@ -318,11 +319,11 @@ Second, most of this work has treated job domains as if they were interchangeabl
 <!--
 Based on these two questions, we reviewed the research on women in male-typed work, and found three things.
 
-[click 1] Bias awareness. Women in male-typed work know employers tend to undervalue them. Every rejection is read against that background.
+Women in male-typed work know employers tend to undervalue them. Every rejection is read against that background.
 
-[click 2] Lower self-assessment. Cultural beliefs tie technical competence more strongly to men. Women walk in with a lower prior on themselves.
+Cultural beliefs connect technical competence more strongly to men. Women walk in with a lower prior on themselves.
 
-[click 3] Token position. As women are a minority in male-typed work, each success is read as an exception — not as evidence they belong.
+As women are a minority in male-typed work, each success is read as an exception — not as evidence they belong.
 -->
 
 ---
@@ -377,7 +378,7 @@ Thus, we propose three hypotheses.
 <!--
 We collected data from Freelancer.com, one of the largest online labor markets in the world. For each worker, we track the first two years of their platform career.
 
-We focus on workers whose platform career began in one of the two most representative domains. IT and Programming is our male-typed domain — its female share is the lowest on the platform, at 11.7%. Writing and Translation is our female-typed counterpart, where the female share is nearly balanced, at 44.9%.
+We focus on workers whose platform career began in one of the two most representative domains, and examine their commitment to the starting domain by gender. IT and Programming is our male-typed domain — its female share is the lowest on the platform, at 11.7%. Writing and Translation is our female-typed counterpart, where the female share is nearly balanced, at 44.9%.
 -->
 
 ---
@@ -433,11 +434,9 @@ We focus on workers whose platform career began in one of the two most represent
 <!--
 We partition each worker's bidding history into biweekly windows.
 
-[click 1] For each window, we measure the feedback the worker has accumulated up to that point. Specifically: cumulative wins in logs — how many prior bids were accepted; failure rate — the share of all prior bids that were rejected; and both of these interacted with a female indicator, which is what lets us test gender differences.
+For each window, we measure the feedback the worker has accumulated up to that point. Specifically: cumulative wins in logs — how many prior bids were accepted; failure rate — the share of all prior bids that were rejected; and both of these interacted with a female indicator, which is what lets us test gender differences.
 
-[click 2] These cumulative feedback measures are then used to predict —
-
-[click 3] — outcomes in the next window. We look at four outcomes: overall bidding activity — how active the worker is; the share of bids placed in IT — how concentrated their effort is in the starting domain; first outside bid — when, for the first time, the worker places a bid outside their starting domain; and domain exit — whether the worker stops bidding in IT altogether.
+These cumulative feedback measures are then used to predict outcomes in the next window. We look at four outcomes: overall bidding activity — how active the worker is; the share of bids placed in IT — how concentrated their effort is in the starting domain; first outside bid — when, for the first time, the worker places a bid outside their starting domain; and domain exit — whether the worker stops bidding in IT altogether.
 -->
 
 ---
